@@ -64,7 +64,7 @@
             </div>
         </div>
     </div>
+</div>  
 
-    <?php include 'inc/partners.php';?>
-
-    <?php get_footer(); ?>
+<?php include 'inc/partners.php';?>
+<?php get_footer(); ?>
