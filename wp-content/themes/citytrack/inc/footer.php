@@ -46,7 +46,7 @@
                             });
                             var marker = new google.maps.Marker({
                               position: uta,
-                              icon: 'assets/img/logo.png',
+                              icon: '<?php echo get_template_directory_uri()?>/assets/img/logo.png',
                               title: 'Tampereen yliopisto',
                               map: map
                             });
@@ -64,11 +64,3 @@
     <?php include 'inc/modals.php';?>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.matchHeight.js"></script>
-<script type="text/javascript" src="assets/js/jquery.truncate.js"></script>
-<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="assets/js/modernizr.js"></script>
-<script type="text/javascript" src="assets/js/timeline.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>

@@ -7,7 +7,7 @@
     <div id="block1" class="block">
         <div class="container">
             <div class="separator">
-                <h1 class="separator-content"><img src="assets/img/logo.png" height="63px"></h1>
+                <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
             </div>
             <div class="row">
                 <h2 class="text-center text-blue col-lg-6 col-lg-push-3 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-12">
@@ -81,35 +81,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-beemray.jpg" alt="Beemray logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-beemray.jpg" alt="Beemray logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-allbright.jpg" alt="Tampere All Bright logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-allbright.jpg" alt="Tampere All Bright logo">
                 </div>
 
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-here.jpg" alt="Here logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-here.jpg" alt="Here logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-sryhma.jpg" alt="Shryma logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-sryhma.jpg" alt="Shryma logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container clear-both">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-finnpark.jpg" alt="Finnpark logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-finnpark.jpg" alt="Finnpark logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-talo.jpg" alt="Tampere Talo logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-talo.jpg" alt="Tampere Talo logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-tampere.jpg" alt="Tampere logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-tampere.jpg" alt="Tampere logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-tredea.jpg" alt="Tredea logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-tredea.jpg" alt="Tredea logo">
                 </div>
                 <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-kesko.jpg" alt="Kesko logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-kesko.jpg" alt="Kesko logo">
                 </div>
                 <div class="col-md-4 col-md-push-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="assets/img/logo-uta.jpg" alt="UTA logo">
+                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-uta.jpg" alt="UTA logo">
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
     <div class="splash-block"></div>
 
         <div class="container separator">
-            <h1 class="separator-content"><img src="assets/img/logo.png" height="63px"></h1>
+            <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
         </div>
 
         <div id="posts" class="block container">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="post-img col-md-5">
                     <div class="img-container text-center">
-                        <img class="img-responsive" src="assets/img/blog-img.jpg">
+                        <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/blog-img.jpg">
                     </div>
                 </div>
                 <div class="post-body col-md-7">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="post-img col-md-5">
                     <div class="img-container text-center">
-                        <img class="img-responsive" src="assets/img/blog-img.jpg">
+                        <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/blog-img.jpg">
                     </div>
                 </div>
                 <div class="post-body col-md-7">
@@ -69,7 +69,7 @@
                 </div>
                 <div class="post-img col-md-5">
                     <div class="img-container text-center">
-                        <img class="img-responsive" src="assets/img/blog-img.jpg">
+                        <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/blog-img.jpg">
                     </div>
                 </div>
                 <div class="post-body col-md-7">

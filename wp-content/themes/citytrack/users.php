@@ -5,14 +5,14 @@
     <div class="splash-block"></div>
 
     <div class="container separator">
-        <h1 class="separator-content"><img src="assets/img/logo.png" height="63px"></h1>
+        <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
     </div>
 
     <div class="block1 block">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <img src="assets/img/icon_1.png" height="63px">
+                    <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_1.png" height="63px">
                     <h2 class="text-blue">What is CityTrack?</h2>
                     <div class="text-light users-description">
                         <p>CityTrack is an application in development designed to make your life easier. 
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="assets/img/icon_2.png" height="63px">
+                    <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_2.png" height="63px">
                     <h2 class="text-blue">Possibilities</h2>
                     <div class="text-light users-description">
                         <p class="text-truncate">In the future, CityTrack app will combine open data from different resources. 
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img src="assets/img/icon_3.png" height="63px">
+                    <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_3.png" height="63px">
                     <h2 class="text-blue">Download the app</h2>
                     <div class="text-light users-description">
                         <p>The app is only developed for Android at first, iOS app unfortunately won’t 
