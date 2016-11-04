@@ -9,10 +9,6 @@ set_post_thumbnail_size(294, 196, true);
 // Menu registration
 //-----------------------------------------------
 register_nav_menus(array('primary' => 'Header Menu'));
-register_nav_menus(array('secondary' => 'Header Sub Menu'));
-register_nav_menus(array('footer-left' => 'Footer Menu Left'));
-register_nav_menus(array('footer-right' => 'Footer Menu Right'));
-
 //-----------------------------------------------
 // Including scripts
 //-----------------------------------------------
