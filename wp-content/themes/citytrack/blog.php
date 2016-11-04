@@ -1,5 +1,10 @@
-<?php include 'header.php';?>
-<?php include 'inc/menu.php';?>
+<?php
+/*Template Name: blog*/
+
+
+get_header();
+
+?>
 
 <div id="blog">
     <div class="splash-block"></div>

@@ -1,5 +1,10 @@
-<?php include 'header.php';?>
-<?php include 'inc/menu.php';?>
+<?php
+/*Template Name: users*/
+
+
+get_header();
+
+?>
 
 <div id="users">
     <div class="splash-block"></div>

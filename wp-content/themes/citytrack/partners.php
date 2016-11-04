@@ -1,6 +1,10 @@
-<?php include 'header.php';?>
-<?php include 'inc/menu.php';?>
+<?php
+/*Template Name: partners*/
 
+
+get_header();
+
+?>
 <div id="partners">
     <div class="splash-block"></div>
 

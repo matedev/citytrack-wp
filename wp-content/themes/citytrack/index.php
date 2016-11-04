@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php include 'inc/menu.php';?>
 
 <div id="main">
     <div class="splash-block">
