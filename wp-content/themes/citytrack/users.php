@@ -66,7 +66,4 @@ get_header();
 </div>  
 
 <?php include 'inc/partners.php';?>
-<?php include 'inc/footer.php';?>
-
-</body>
-</html>
+<?php get_footer(); ?>
