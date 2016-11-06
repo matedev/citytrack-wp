@@ -12,13 +12,17 @@
                             if ($ctr < 7) :
                 ?>
                             <div class="col-md-2 col-sm-4 img-container">
-                                <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
-                                 alt="<?php the_sub_field('name'); ?>">
+                                <a href="<?php the_sub_field('url'); ?>" target="_blank">
+                                    <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
+                                     alt="<?php the_sub_field('name'); ?>">
+                                 </a>
                             </div>                            
                       <?php else : ?>
                             <div class="col-md-2 col-md-push-2 col-sm-4 img-container">
-                                <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
-                                 alt="<?php the_sub_field('name'); ?>">
+                                <a href="<?php the_sub_field('url'); ?>" target="_blank">   
+                                    <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
+                                     alt="<?php the_sub_field('name'); ?>">
+                                </a>
                             </div>
                 <?php
                             endif;
