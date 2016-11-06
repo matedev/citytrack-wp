@@ -30,11 +30,7 @@
             </div>
             <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
-                <?php wp_nav_menu(array("theme_location" => "primary", 'container' => '', 'items_wrap' => '%3$s')); ?>
-                    <!--li><a href="index.php">Citytrack</a></li>
-                    <li><a href="users.php">Pilot users</a></li>
-                    <li><a href="partners.php">Partners</a></li>
-                    <li><a href="blog.php">Blog</a></li-->
+                    <?php wp_nav_menu(array("theme_location" => "primary", 'container' => '', 'items_wrap' => '%3$s')); ?>
                 </ul>
             </div>
         </div>

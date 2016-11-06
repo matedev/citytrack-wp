@@ -467,7 +467,6 @@ footer {
 */
 
 #partners .splash-block {
-    background-image: url(../img/splash2.jpg);
     height: 250px;
     margin-top: 84px;
 }
@@ -514,7 +513,6 @@ footer {
 
 #blog .splash-block,
 #users .splash-block {
-    background-image: url(../img/splash3.jpg);
     height: 250px;
     margin-top: 84px;
 }

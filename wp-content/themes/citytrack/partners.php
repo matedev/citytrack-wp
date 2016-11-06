@@ -4,9 +4,12 @@
 
 get_header();
 
+$src = wp_get_attachment_image_src( get_post_thumbnail_id(11), 'thumbnail_size' );
+$splash_url = $src[0];
+
 ?>
 <div id="partners">
-    <div class="splash-block"></div>
+     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
 
     <div id="block1" class="block">
         <div class="container">

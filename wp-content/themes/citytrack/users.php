@@ -4,10 +4,13 @@
 
 get_header();
 
+$src = wp_get_attachment_image_src( get_post_thumbnail_id(4), 'thumbnail_size' );
+$splash_url = $src[0];
+
 ?>
 
 <div id="users">
-    <div class="splash-block"></div>
+    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
 
     <div class="container separator">
         <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
@@ -18,7 +21,8 @@ get_header();
             <div class="row">
                 <div class="col-md-4 text-center">
                     <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_1.png" height="63px">
-                    <h2 class="text-blue">What is CityTrack?</h2>
+                    <h2 class="text-blue">What is CityTrack?
+                    </h2>
                     <div class="text-light users-description">
                         <p>CityTrack is an application in development designed to make your life easier. 
                         Once the app is finished, it will guide you around Tampere city centre, both 
