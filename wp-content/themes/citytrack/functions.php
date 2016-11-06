@@ -46,79 +46,11 @@ function remove_admin_login_header() {
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
-        'page_title'    => 'Footer extra',
-        'menu_title'    => 'Footer extra',
-        'menu_slug'     => 'footer_extra',
+        'page_title'    => 'CityTrack partners',
+        'menu_title'    => 'CityTrack partners',
+        'menu_slug'     => 'partner_logos',
         'capability'    => 'edit_posts',
         'redirect'      => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'    => 'Slider',
-        'menu_title'    => 'Slider',
-        'menu_slug'     => 'slider',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'    => 'Kapcsolat',
-        'menu_title'    => 'Kapcsolat',
-        'menu_slug'     => 'kapcsolat',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'    => 'Prémium partnerek',
-        'menu_title'    => 'Prémium partnerek',
-        'menu_slug'     => 'premium-partners',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'    => 'Logók',
-        'menu_title'    => 'Logók',
-        'menu_slug'     => 'logo-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'    => 'Konfigurátor',
-        'menu_title'    => 'Konfigurátor',
-        'menu_slug'     => 'konfigurator',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'    => 'Idopontfoglalás',
-        'menu_title'    => 'Idopontfoglalás',
-        'menu_slug'     => 'idopont-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-    
-    acf_add_options_page(array(
-        'page_title'    => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'      => false
-    ));
-    
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Header Settings',
-        'menu_title'    => 'Header',
-        'parent_slug'   => 'theme-general-settings',
-    ));
-    
-    acf_add_options_sub_page(array(
-        'page_title'    => 'Theme Footer Settings',
-        'menu_title'    => 'Footer',
-        'parent_slug'   => 'theme-general-settings',
     ));
     
 }
@@ -136,14 +68,14 @@ add_action('admin_enqueue_scripts', 'chrome_fix');
 //-----------------------------------------------
 // Hide ACF
 //-----------------------------------------------
-add_filter('acf/settings/show_admin', '__return_false');
+//add_filter('acf/settings/show_admin', '__return_false');
 
 
 //-----------------------------------------------
 // Change the footer text
 //-----------------------------------------------
 function change_admin_footer() {
-    echo "HATVANI WORDPRESS ADMIN THEME by DONE.";
+    echo "CityTrack WordPress Admin Theme by UTA.";
 }
 
 add_filter( 'admin_footer_text', 'change_admin_footer' );
