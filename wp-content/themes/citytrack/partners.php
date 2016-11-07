@@ -123,4 +123,5 @@ $splash_url = $src[0];
     </div>
 </div>
 
+<?php include 'footer.php';?>
 <?php get_footer(); ?>

@@ -2,7 +2,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <h2>CityTrack Project</h2>
+                    <?php
+                        the_field('footer_column_1','option');
+                    ?>
+                    <!--h2>CityTrack Project</h2>
                     <p class="text-light padding-30">
                         CityTrack is a project of university of Tampere. The project seeks to combine 
                         seamless indoor and outdoor positioning with other open data to provide both 
@@ -13,24 +16,43 @@
                         Feedback?</strong> Send email to 
                         <strong><a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a></strong>.
                         
-                    </p>
+                    </p-->
                 </div>
                 <div class="col-md-4 text-center">
-                    <h2>Contact Information</h2>
-                    <h2 class="padding-30 margin-0">Social Media</h2>
-                    <ul class="social-list">
-                        <li><a href="" class="red fa fa-facebook fa-2x"></a></li>
-                        <li><a href="" class="red fa fa-youtube fa-2x"></a></li>
-                        <li><a href="" class="red fa fa-twitter fa-2x"></a></li>
-                    </ul>
-                    <p class="text-center padding-50">
+                <?php
+                    if ( have_rows('footer_column_2','option') ):
+                        while ( have_rows('footer_column_2','option') ) : the_row(); 
+                            the_sub_field('social_header');
+                ?>
+                            <ul class="social-list">
+                            <?php if(get_sub_field('facebook') ): ?>
+                                <li><a href="<?php the_sub_field('facebook'); ?>" class="fa fa-facebook fa-2x"></a></li>
+                            <?php
+                                endif;    
+                            ?>
+                            <?php if(get_sub_field('youtube') ): ?>
+                                <li><a href="<?php the_sub_field('youtube'); ?>" class="fa fa-youtube fa-2x"></a></li>
+                            <?php
+                                endif;    
+                            ?>
+                            <?php if(get_sub_field('linkedin') ): ?>
+                                <li><a href="<?php the_sub_field('linkedin'); ?>" class="fa fa-linkedin fa-2x"></a></li>
+                            <?php
+                                endif;
+                            ?>                                                       
+                            </ul>
+                <?php
+                        endwhile;
+                    endif;    
+                ?>
+                    <p class="text-center text-regular padding-50">
                         <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
                     </p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <h2>Location</h2>
-                    <p class="text-light padding-30">Kalevantie 4, 331000 Tampere</p>
-
+                    <?php
+                        the_field('footer_column_3','option');
+                    ?>
                     <div id="map"></div>
 
                     <script async defer
