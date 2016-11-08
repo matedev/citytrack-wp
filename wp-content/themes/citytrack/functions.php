@@ -75,7 +75,7 @@ if( function_exists('acf_add_options_page') ) {
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
   if (empty($pagerange)) {
-    $pagerange = 2;
+    $pagerange = 1;
   }
 
   /**
@@ -108,9 +108,9 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
     'format'          => 'page/%#%',
     'total'           => $numpages,
     'current'         => $paged,
-    //'show_all'        => False,
-    //'end_size'        => 1,
-    //'mid_size'        => $pagerange,
+    'show_all'        => False,
+    'end_size'        => 1,
+    'mid_size'        => $pagerange,
     'prev_next'       => True,
     'prev_text'       => __('<i class="fa fa-play fa-rotate" aria-hidden="true"></i>'),
     'next_text'       => __('<i class="fa fa-play" aria-hidden="true"></i>'),
