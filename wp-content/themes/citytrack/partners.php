@@ -12,27 +12,21 @@ $splash_url = $src[0];
      <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
 
     <div id="block1" class="block">
-        <div class="container">
+        <div class="container text-center">
             <div class="separator">
                 <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
             </div>
-            <div class="row">
-                <h2 class="text-center text-blue col-lg-6 col-lg-push-3 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-12">
-                    Interested in the pilot?
-                </h2>
-            </div>
-                <p class="text-center text-light">
-                    Are you interested in joining the Citytrack piloting project? Do you own a business in Tampere city centre? 
-                    Could your customers for example benefit from indoor positionging? 
-                    Or do you have other ideas and are looking for someone to achieve them with?
-                </p>
-                <p class="text-center padding-t30">
-                    If you think CityTrack could be the right thing for your business, please contact us! 
-                    <br>Send e-mail to <a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a>.
-                </p>
-                <p class="text-center padding-50">
-                    <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'>Contact Us</button>
-                </p>
+            <?php 
+                if ( have_posts() ) {
+                    while ( have_posts() ) {
+                        the_post(); ?>         
+                        <?php the_content(); ?>
+                    <?php }
+                }
+            ?>
+            <p class="padding-50">
+                <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'>Contact Us</button>
+            </p>
         </div>
     </div>
 

@@ -487,6 +487,13 @@ footer {
     background-image: url(../img/bg3.jpg);
 }
 
+#partners #block1 h2{
+    color: #115788;
+}
+#partners #block1 p{
+   
+}
+
 #partners #block1 a,
 #partners #block1 a:hover,
 #partners #block1 a:visited,
@@ -575,6 +582,14 @@ footer {
 
 #users .block1{
     margin-top: 80px;
+}
+
+#users .block h2{
+    color: #115788;
+}
+
+#users .block p{
+    font-family: "Open-Sans-light";
 }
 
 /**
