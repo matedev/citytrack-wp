@@ -19,42 +19,23 @@ $splash_url = $src[0];
     <div class="block1 block">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_1.png" height="63px">
-                    <h2 class="text-blue">What is CityTrack?
-                    </h2>
-                    <div class="text-light users-description">
-                        <p>CityTrack is an application in development designed to make your life easier. 
-                        Once the app is finished, it will guide you around Tampere city centre, both 
-                        indoors and outdoors. It will also inform you of possible interesting events 
-                        near you,  and have awesome offers from local businesses.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_2.png" height="63px">
-                    <h2 class="text-blue">Possibilities</h2>
-                    <div class="text-light users-description">
-                        <p class="text-truncate">In the future, CityTrack app will combine open data from different resources. 
-                        It will know if there are traffic jams, when the next bus to your destination is 
-                        coming, where to park your car if you want to take a train from the railway 
-                        station, and much more.</p>
-                        <p>The app’s indoor positioning is made possible with 
-                        wireless networks and Bluetooth low energy technology.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="<?php echo get_template_directory_uri()?>/assets/img/icon_3.png" height="63px">
-                    <h2 class="text-blue">Download the app</h2>
-                    <div class="text-light users-description">
-                        <p>The app is only developed for Android at first, iOS app unfortunately won’t 
-                        be available as fast. The first version of the Android app should be available
-                         for download in Google’s Play Store towards the end of the year 2016. More 
-                         accurate information will be published here later.</p>
-                         <p>Some partners will 
-                         develop their own apps on top of our CityTrack app, a link to those apps 
-                         will also be posted here once those apps are available in Play Store.</p>
-                     </div>
-                </div>
+                <?php
+                    if ( have_rows('scrollable_container', 4) ):
+                        while ( have_rows('scrollable_container', 4) ) : the_row(); 
+                ?>
+                            <div class="col-md-4 text-center">
+                                <img src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>" height="63px">
+                                <h2 class="text-blue">
+                                    <?php the_sub_field('header')?>
+                                </h2>
+                                <div class="text-light users-description">
+                                    <?php the_sub_field('description')?>
+                                </div>
+                            </div>
+                <?php            
+                        endwhile;
+                    endif
+                ?>
             </div>
         </div>         
     </div>
@@ -62,8 +43,14 @@ $splash_url = $src[0];
     <div class="block2 block">
         <div class="container">
             <div class="row text-center">
-                <h2 class="text-blue">Would you like to test CityTrack?</h2>
-                <p class="text-light">Make a reservation</p>
+                <?php 
+                    if ( have_posts() ) {
+                        while ( have_posts() ) {
+                            the_post(); ?>         
+                            <?php the_content(); ?>
+                        <?php }
+                    }
+                ?>
             </div>
         </div>
     </div>
