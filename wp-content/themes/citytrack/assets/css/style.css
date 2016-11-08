@@ -620,12 +620,20 @@ footer {
         -webkit-transition: all 0.5s ease-in-out 0s;
         transition: all 0.5s ease-in-out 0s;
     }
+
+    #partner-block .img-class{
+        width: 60%;
+    }
 }
 
 @media (max-width: 767px) {
     .img-container {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        /*margin-top: 40px;
+        margin-bottom: 40px;*/
+    }
+
+    #partner-block .img-class{
+        width: 40%;
     }
 }
 
@@ -686,6 +694,10 @@ footer {
         position: absolute;
         right: 0;
         top: 0;
+    }
+
+    #partner-block .img-class{
+        width: 60%;
     }
 }
 

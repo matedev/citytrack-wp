@@ -87,37 +87,20 @@ $splash_url = $src[0];
     <div id="partner-block" class="block">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-beemray.jpg" alt="Beemray logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-allbright.jpg" alt="Tampere All Bright logo">
-                </div>
-
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-here.jpg" alt="Here logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-sryhma.jpg" alt="Shryma logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container clear-both">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-finnpark.jpg" alt="Finnpark logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-talo.jpg" alt="Tampere Talo logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-tampere.jpg" alt="Tampere logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-tredea.jpg" alt="Tredea logo">
-                </div>
-                <div class="col-md-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-kesko.jpg" alt="Kesko logo">
-                </div>
-                <div class="col-md-4 col-md-push-4 col-sm-6 img-container">
-                    <span class="helper"></span><img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/logo-uta.jpg" alt="UTA logo">
-                </div>
+                <?php
+                    if ( have_rows('partner_logos','option') ):
+                        while ( have_rows('partner_logos','option') ) : the_row(); 
+                ?>
+                            <div class="col-md-4 col-sm-6 img-container">
+                                <a href="<?php the_sub_field('url'); ?>" target="_blank">
+                                    <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
+                                     alt="<?php the_sub_field('name'); ?>">
+                                 </a>
+                            </div>
+                <?php
+                        endwhile;
+                    endif;
+                ?>
             </div>
         </div>
     </div>

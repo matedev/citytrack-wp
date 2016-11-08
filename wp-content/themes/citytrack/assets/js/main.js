@@ -13,6 +13,9 @@
             'showText': 'Read More', 'hideText': "Read Less", 'animate':true
         });
 
+        $('#partner-block .img-container').slice(-4).addClass("col-md-push-2 col-xs-6");
+        $('#partner-block .img-container').slice(-2).addClass("col-sm-push-3");
+
         /*$('.navbar-nav li a').on('click',function(e){
             $(this).parent().parent().find('.active').removeClass('active');
             $(this).parent().addClass('active');
