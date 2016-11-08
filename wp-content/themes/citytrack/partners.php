@@ -37,46 +37,43 @@ $splash_url = $src[0];
     </div>
 
     <section id="cd-timeline" class="cd-container">
-        <div class="cd-timeline-block cd-timeline-block-disabled">
-            <div class="cd-timeline-img cd-picture"> 
-                <i class="fa fa-group text-white text-center" aria-hidden="true"></i>
-            </div> <!-- cd-timeline-img -->
 
-            <div class="cd-timeline-content">
-                <h2 class="text-blue">Initial meeting</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="initial meeting" 
-                data-date="Oct 30" data-desc="Please note: meeting starts at 9:00 in Pinni B 1029." href='#modal-attend'>Attend</button>
-                <span class="cd-date">Oct 30</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture"> 
-                <i class="fa fa-info text-white text-center" aria-hidden="true"></i>
-            </div> <!-- cd-timeline-img -->
+        <?php
+            if ( have_rows('events','option') ):
+                while ( have_rows('events','option') ) : 
+                    the_row();
+        ?> 
+            <div class="cd-timeline-block cd-timeline-block-disabled">
+                <div class="cd-timeline-img cd-picture"> 
+                <?php 
+                    switch (get_sub_field('type')) {
+                        case 'Initial':
+                            echo '<i class="fa fa-group text-white text-center" aria-hidden="true"></i>';
+                            break;
+                        case "Kick off":
+                            echo '<i class="fa fa-info text-white text-center" aria-hidden="true"></i>';
+                            break;
+                        case "Technical":
+                            echo '<i class="fa fa-cogs text-white text-center" aria-hidden="true"></i>';
+                            break;               
+                    }
+                ?>
+                </div> <!-- cd-timeline-img -->
+                <div class="cd-timeline-content">
+                    <h2 class="text-blue"><?php the_sub_field('title') ?></h2>
+                    <p><?php the_sub_field('description') ?></p>
+                    <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="<?php the_sub_field('title') ?>" 
+                    data-date="<?php the_sub_field('date') ?>" data-desc="Please note: meeting starts at <?php the_sub_field('time') ?> 
+                    in <?php the_sub_field('place') ?>." href='#modal-attend'>Attend</button>
+                    <span class="cd-date"><?php the_sub_field('date') ?></span>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->                       
+        <?php
+                endwhile;
+            endif;
+        ?>
 
-            <div class="cd-timeline-content">
-                <h2 class="text-blue">Kick off meeting</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="kick off meeting" 
-                data-date="Nov 14" data-desc="Please note: meeting starts at 9:00 in Pinni B 1029." href='#modal-attend'>Attend</button>
-                <span class="cd-date">Nov 14</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
-
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-                <i class="fa fa-cogs text-white text-center" aria-hidden="true"></i>
-            </div> <!-- cd-timeline-img -->
-
-            <div class="cd-timeline-content">
-                <h2 class="text-blue">Technical meeting</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-                <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="technical meeting" 
-                data-date="Nov 18" data-desc="Please note: meeting starts at 9:00 in Pinni B 1029." href='#modal-attend'>Attend</button>
-                <span class="cd-date">Nov 18</span>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
+       
     </section> <!-- cd-timeline -->
 
 
