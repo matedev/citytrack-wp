@@ -42,7 +42,6 @@ function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 
-
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(

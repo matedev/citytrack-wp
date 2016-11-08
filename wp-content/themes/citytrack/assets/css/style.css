@@ -478,6 +478,10 @@ footer {
     margin-top: 138px;
 }
 
+#main .block p{
+    font-family: "Open-Sans-light";
+}
+
 
 #main #block2 {
     background-image: url(../img/bg1.jpg);
