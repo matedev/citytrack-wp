@@ -71,14 +71,12 @@ $splash_url = $src[0];
         <?php
                 endwhile;
             endif;
-        ?>
-
-       
+        ?>       
     </section> <!-- cd-timeline -->
 
 
     <div class="container separator">
-            <h1 class="separator-content">CityTrack Project Partners</h1>
+        <h1 class="separator-content">CityTrack Project Partners</h1>
     </div>
 
     <div id="partner-block" class="block">
@@ -88,7 +86,7 @@ $splash_url = $src[0];
                     if ( have_rows('partner_logos','option') ):
                         while ( have_rows('partner_logos','option') ) : the_row(); 
                 ?>
-                            <div class="col-md-4 col-sm-6 img-container">
+                            <div class="col-md-3 col-sm-4 col-xs-6 img-container">
                                 <a href="<?php the_sub_field('url'); ?>" target="_blank">
                                     <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
                                      alt="<?php the_sub_field('name'); ?>">

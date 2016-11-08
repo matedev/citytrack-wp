@@ -2,7 +2,7 @@
             <h1 class="separator-content">CityTrack Partners</h1>
     </div>
 
-    <div id="partner-block">
+    <div id="partner-list">
         <div class="container">
             <div class="row">
                 <?php
