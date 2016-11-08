@@ -25,6 +25,7 @@ a:visited,
 a:active,
 a:focus {
     text-decoration: none;
+    text-shadow: none;
 }
 
 p {
@@ -164,6 +165,7 @@ p {
 .navbar.navbar-default .navbar-nav>li>a {
     color: #115788;
     font-weight: 400;
+    text-shadow: none;
 }
 
 .navbar .navbar-nav>li:hover,
@@ -181,6 +183,24 @@ p {
     background: #115788;
     box-shadow: none;
     color: white;
+}
+
+.navbar-default .navbar-nav > li.current-menu-item,
+.navbar-default .navbar-nav > li.current-menu-item a{
+    background-color: #115788;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li.current-menu-item a:after{
+    background-color: white;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 15%;
+    position: absolute;
+    right: 15%;
+    visibility: visible;
+    transform: none;
 }
 
 /**
@@ -592,19 +612,12 @@ footer {
     font-family: "Open-Sans-light";
 }
 
-/**
-* jQuery DatePicker restyle
-*
-* Style for the calendar used on users page.
-*/
 
 /**
 * Media queries
 *
 * Media queries applied all over the site.
 */
-
-
 
 @media (min-width: 616px) {
     #modal-contact .modal-body input {
@@ -732,11 +745,12 @@ footer {
 }
 
 
+/**
+* Custom Pagination
+*
+* Design of the pagination on blog page
+*/
 
-
-/* ============================================================
-  CUSTOM PAGINATION
-============================================================ */
 .custom-pagination span,
 .custom-pagination a {
   display: inline-block;
@@ -775,3 +789,4 @@ footer {
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
