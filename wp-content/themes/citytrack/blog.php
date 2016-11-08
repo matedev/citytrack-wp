@@ -7,9 +7,18 @@ get_header();
 $src = wp_get_attachment_image_src( get_post_thumbnail_id(9), 'thumbnail_size' );
 $splash_url = $src[0];
 
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+$args = array(
+  'post_type' => 'post',
+  'posts_per_page' => 1,
+  'paged' => $paged
+);
+ 
+$custom_query = new WP_Query( $args );
 ?>
 
 <div id="blog">
+
     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
 
     <div class="container separator">
@@ -17,84 +26,54 @@ $splash_url = $src[0];
     </div>
 
     <div id="posts" class="block container">
-        <div class="row apost">
+
+      <?php if ( $custom_query->have_posts() ) : ?>
+
+        <!-- the loop -->
+        <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+
+        <article class="row apost">
             <div class="post-header col-md-12">
-                    <p>Posted on <span id="post-date">16.10.2016</span>
-                    <strong> by <span id="post-author">XY</span></strong></p>
+                    <p>Posted on <span id="post-date"><?php echo $post->post_date; ?></span>
+                    <strong> by <span id="post-author"><?php the_author(); ?></span></strong></p>
                 
             </div>
             <div class="post-img col-md-5">
                 <div class="img-container text-center">
-                    <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/blog-img.jpg">
+                    <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
                 </div>
             </div>
             <div class="post-body col-md-7">
                 <h1 class="post-title text-blue">
-                    This is the title of a blog post
+                    <?php the_title(); ?>
                 </h1>
                 <p class="post-text demo1">
-                    CityTrack project will become an unique urban test site for the design, 
-                    development and piloting of modern mobility services and service-rich 
-                    dense urban venues. CityTrack helps companies create a highly 
-                    personalized,seamless and data-driven cross-channel event....
+                    <?php the_excerpt(); ?>
                 </p>
                 <p class="text-right">
                     <button type="button" class="btn btn-blue" data-toggle="" href=''>Read more</button>
                 </p>
             </div>
-        </div>
-        <div class="row apost">
-            <div class="post-header col-md-12">
-                    <p>Posted on <span id="post-date">16.10.2016</span>
-                    <strong> by <span id="post-author">XY</span></strong></p>
-                
-            </div>
-            <div class="post-img col-md-5">
-                <div class="img-container text-center">
-                    <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/blog-img.jpg">
-                </div>
-            </div>
-            <div class="post-body col-md-7">
-                <h1 class="post-title text-blue">
-                    This is the title of a blog post
-                </h1>
-                <p class="post-text demo1">
-                    CityTrack project will become an unique urban test site for the design, 
-                    development and piloting of modern mobility services and service-rich 
-                    dense urban venues. CityTrack helps companies create a highly 
-                    personalized,seamless and data-driven cross-channel event....                                                                       
-                </p>
-                <p class="text-right">
-                    <button type="button" class="btn btn-blue" data-toggle="" href=''>Read more</button>
-                </p>
-            </div>
-        </div>
-        <div class="row apost">
-            <div class="post-header col-md-12">
-                    <p>Posted on <span id="post-date">16.10.2016</span>
-                    <strong> by <span id="post-author">XY</span></strong></p>
-                
-            </div>
-            <div class="post-img col-md-5">
-                <div class="img-container text-center">
-                    <img class="img-responsive" src="<?php echo get_template_directory_uri()?>/assets/img/blog-img.jpg">
-                </div>
-            </div>
-            <div class="post-body col-md-7">
-                <h1 class="post-title text-blue">
-                    This is the title of a blog post
-                </h1>
-                <p class="post-text demo1">
-                    CityTrack project will become an unique urban test site for the design, 
-                    development and piloting of modern mobility services and service-rich 
-                    dense urban venues. CityTrack helps companies create a highly 
-                    personalized,seamless and data-driven cross-channel event....                                                                       
-                </p>
-                <p class="text-right">
-                    <button type="button" class="btn btn-blue" data-toggle="" href=''>Read more</button>
-                </p>
-            </div>
-        </div>
+        </article>
+
+
+
+        <?php endwhile; ?>
+        <!-- end of the loop -->
+
+        <!-- pagination here -->
+        <?php
+          if (function_exists(custom_pagination)) {
+            custom_pagination($custom_query->max_num_pages,"",$paged);
+          }
+        ?>
+
+      <?php wp_reset_postdata(); ?>
+
+      <?php else:  ?>
+        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+      <?php endif; ?>
+
     </div>
 </div>  
 

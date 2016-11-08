@@ -21,7 +21,7 @@ get_header();
         <div class="container">
             <div class="row">
                 <h2 class="text-center text-blue col-lg-6 col-lg-push-3 col-md-8 col-md-push-2 col-sm-10 col-sm-push-1 col-xs-12">
-                    <div><?php the_title(); ?></div>Indoor and outdoor positioning in Tampere city centre area
+                    Indoor and outdoor positioning in Tampere city centre area
                 </h2>
             </div>
                 <p class="text-center text-light">

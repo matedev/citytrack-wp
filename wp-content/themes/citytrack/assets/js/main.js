@@ -14,6 +14,8 @@
             'showText': 'Read More', 'hideText': "Read Less", 'animate':true
         });
 
+        $(' #blog #posts .apost .img-container img').addClass("img-responsive");
+
         $('#partner-list .img-container').slice(-4).addClass("col-md-push-2 col-xs-6");
         $('#partner-list .img-container').slice(-2).addClass("col-sm-push-3");
 
