@@ -111,7 +111,7 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
     'end_size'        => 1,
     'mid_size'        => $pagerange,
     'prev_next'       => True,
-    'prev_text'       => __('<i class="fa fa-play fa-rotate" aria-hidden="true"></i>'),
+    'prev_text'       => __('<i class="fa fa-play fa-rotate-180" aria-hidden="true"></i>'),
     'next_text'       => __('<i class="fa fa-play" aria-hidden="true"></i>'),
     'type'            => 'plain',
     'add_args'        => false,

@@ -65,7 +65,28 @@ $splash_url = $src[0];
         <?php
                 endwhile;
             endif;
-        ?>       
+        ?>
+
+
+        <?php
+            if ( have_rows('more_events','option') ):
+                while ( have_rows('more_events','option') ) : 
+                    the_row();
+        ?> 
+            <div class="cd-timeline-block cd-timeline-block-disabled">
+                <div class="cd-timeline-img cd-picture"> 
+                    <i class="fa fa-forward text-white text-center fa-rotate-90" aria-hidden="true"></i>
+                </div> <!-- cd-timeline-img -->
+                <div class="cd-timeline-content">
+                    <h2 class="text-blue"><?php the_sub_field('title') ?></h2>
+                    <p><?php the_sub_field('description') ?></p>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->                       
+        <?php
+                endwhile;
+            endif;
+        ?>
+
     </section> <!-- cd-timeline -->
 
 
