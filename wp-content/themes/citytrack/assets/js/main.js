@@ -21,11 +21,6 @@
 
         $('#partner-block .img-container').slice(-2).addClass("col-md-push-3");
         $('#partner-block .img-container').slice(-1).addClass("col-sm-push-4");
-        /*$('.navbar-nav li a').on('click',function(e){
-            $(this).parent().parent().find('.active').removeClass('active');
-            $(this).parent().addClass('active');
-        })*/
-
     });
 
     $(document).on("click", ".btn-attend", function () {
