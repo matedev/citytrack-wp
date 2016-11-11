@@ -777,6 +777,9 @@ footer {
     #blog #posts .img-container img {
         margin: 0 auto;
     }
+    #img-phone{
+        display: none;
+    }
 }
 
 
