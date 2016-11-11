@@ -41,17 +41,50 @@ $splash_url = $src[0];
     </div>
 
     <div class="block2 block">
+        <div class="container separator">
+            <h1 class="separator-content">Pilots of core partners</h1>
+        </div>
         <div class="container">
             <div class="row text-center">
-                <?php 
+                <p>
+                    Together with core partners Here, Beemray, Finnpark, Kesko, Tampere Hall and the S Group 
+                    we pilot new services related to <strong><span style="color: #115788;">urban mobility</span></strong> and 
+                    <strong><span style="color: #115788;">cross-channel customer experiences</span></strong>
+                    In Tampere city centre around the railway station 
+                </p>
+                <?php /*
                     if ( have_posts() ) {
                         while ( have_posts() ) {
                             the_post(); ?>         
                             <?php the_content(); ?>
                         <?php }
                     }
-                ?>
+               */ ?>
             </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-push-1">
+                <div class="col-md-4 col-sm-3 col-xs-6 img-container">
+                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners2.jpg ?>">
+                </div>
+                <div class="col-md-4 col-sm-3 col-xs-6 img-container">
+                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners4.jpg ?>">
+                </div>
+                <div class="col-md-4 col-sm-3 col-xs-6 img-container">
+                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners5.jpg ?>">
+                </div>
+                  
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-push-2 col-sm-3 col-xs-6 img-container">
+                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners1.jpg ?>">
+                </div>
+                <div class="col-md-4 col-md-push-2 col-sm-3 col-xs-6 img-container">
+                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners3.jpg ?>">
+                </div>                
+            </div>  
         </div>
     </div>
 </div>  
