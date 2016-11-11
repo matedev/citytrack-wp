@@ -12,12 +12,11 @@ get_header();
             <img src="<?php echo get_template_directory_uri()?>/assets/img/phone.png" id="img-phone">
         </div>  
     </div>
-    
-    <div class="container separator">
-            <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
-    </div>
 
     <div id="block1" class="block">
+        <div class="container separator">
+                <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
+        </div>
         <div class="container text-center">
             <?php the_field('block_1'); ?>
         </div>

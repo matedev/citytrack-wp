@@ -88,7 +88,7 @@ p {
 */
 
 .block {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .splash-block {
@@ -103,6 +103,7 @@ p {
 
 .block .container h2 {
     font-family: 'Open-Sans-600';
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
