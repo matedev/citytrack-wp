@@ -30,6 +30,33 @@ $splash_url = $src[0];
         </div>
     </div>
 
+    <div id="block2" class="block">
+        <div class="container text-center">
+            <div class="separator">
+                <h1 class="separator-content">Test Site</h1>
+            </div>
+            <?php 
+                if ( have_posts() ) {
+                    while ( have_posts() ) {
+                        the_post(); ?>         
+                        <?php the_content(); ?>
+                    <?php }
+                }
+            ?>
+            <p class="padding-50">
+                <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'>Contact Us</button>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="block">
+        <div class="container text-center">
+            <div class="separator">
+                <h1 class="separator-content">Events</h1>
+            </div>
+        </div>
+    </div>
     <section id="cd-timeline" class="cd-container">
 
         <?php
@@ -41,7 +68,7 @@ $splash_url = $src[0];
                 <div class="cd-timeline-img cd-picture"> 
                 <?php 
                     switch (get_sub_field('type')) {
-                        case 'Initial':
+                        case 'Information':
                             echo '<i class="fa fa-group text-white text-center" aria-hidden="true"></i>';
                             break;
                         case "Kick off":

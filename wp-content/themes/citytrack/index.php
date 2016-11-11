@@ -42,7 +42,7 @@ get_header();
          <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <?php the_field('block_2'); ?>
+                    <?php the_field('block_3'); ?>
                 </div>
             </div>
         </div>
