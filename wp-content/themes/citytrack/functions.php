@@ -9,6 +9,11 @@ set_post_thumbnail_size(294, 196, true);
 // Menu registration
 //-----------------------------------------------
 register_nav_menus(array('primary' => 'Header Menu'));
+
+load_theme_textdomain( 'citytrack', get_template_directory() . '/languages' );
+
+
+
 //-----------------------------------------------
 // Including scripts
 //-----------------------------------------------

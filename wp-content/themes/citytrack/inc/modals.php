@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <div class="modal-header text-center text-light">Contact us</div>
+      <div class="modal-header text-center text-light"><?php _e( 'Contact us', 'citytrack')?> </div>
 
       <div class="modal-body">
         <form id="contactform" method="" role="form">
