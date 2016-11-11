@@ -24,19 +24,19 @@ $splash_url = $src[0];
                     <?php }
                 }
             ?>
-            <p class="padding-50">
+            <p class="padding-t50">
                 <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'>Contact Us</button>
             </p>
         </div>
     </div>
     
-    <div class="block">
-        <div class="container text-center">
-            <div class="separator">
-                <h1 class="separator-content">Events</h1>
-            </div>
+
+    <div class="container text-center">
+        <div class="separator">
+            <h1 class="separator-content">Events</h1>
         </div>
     </div>
+    
     <section id="cd-timeline" class="cd-container">
 
         <?php
@@ -96,7 +96,7 @@ $splash_url = $src[0];
 
     </section> <!-- cd-timeline -->
 
-    <div id="block2" class="block padding-b60">
+    <div id="block2">
         <div class="container text-center">
             <div class="separator">
                 <h1 class="separator-content">We offer</h1>

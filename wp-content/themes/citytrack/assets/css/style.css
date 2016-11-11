@@ -267,8 +267,9 @@ p {
 }
 
 .separator.partner-separator {
+    margin-bottom: 0;
     margin-top: 0;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 /**
@@ -534,6 +535,11 @@ footer {
 
 #partners #block2 {
     background-image: url(../img/bg3.jpg);
+    padding-bottom: 43px;
+}
+
+#partners #block2 .separator{
+    margin-bottom: 28px;
 }
 
 #partners #block1 h2{
@@ -553,6 +559,7 @@ footer {
 #partner-block,
 #partner-list {
     margin-bottom: 20px;
+    margin-top: -20px;
 }
 
 #partner-block .img-class,
