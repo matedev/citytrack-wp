@@ -8,11 +8,11 @@
         $('#partner-block .img-container').matchHeight();
         $('#partner-list .img-container').matchHeight();
 
-        $('.users-description').truncate({
+        /*$('.users-description').truncate({
             'maxLines': 5,
             'truncateString': '&nbsp;&#8230;',
             'showText': 'Read More', 'hideText': "Read Less", 'animate':true
-        });
+        });*/
 
         $(' #blog #posts .apost .img-container img').addClass("img-responsive");
 

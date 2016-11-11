@@ -23,6 +23,24 @@ get_header();
         </div>
     </div>
 
+    <div class="container separator">
+            <h1 class="separator-content">Targets</h1>
+    </div>
+
+    <div class="block">
+        <div class="container text-center text-light">
+            <p>
+            A central aim of the CityTrack research project is to translate location 
+            information to added value for consumers who move about in the city centre. 
+            </p>
+            <p>
+            New services will be introduced in the test site at and around the Tampere 
+            railway station in order to help people find suitable connecting train routes, 
+            restaurants and shops. 
+            </p>
+        </div>
+    </div>
+
     <div id="block2" class="block">
         <div class="container">
             <div class="row">

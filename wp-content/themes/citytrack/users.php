@@ -23,7 +23,7 @@ $splash_url = $src[0];
                     if ( have_rows('scrollable_container', 4) ):
                         while ( have_rows('scrollable_container', 4) ) : the_row(); 
                 ?>
-                            <div class="col-md-4 text-center">
+                            <div class="col-md-4 col-md-push-2 text-center">
                                 <img src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>" height="63px">
                                 <h2 class="text-blue">
                                     <?php the_sub_field('header')?>

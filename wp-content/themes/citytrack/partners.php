@@ -29,29 +29,7 @@ $splash_url = $src[0];
             </p>
         </div>
     </div>
-
-    <div id="block2" class="block padding-b60">
-        <div class="container text-center">
-            <div class="separator">
-                <h1 class="separator-content">We offer</h1>
-            </div>
-            <p>
-                A test site for companies and organisations where they can plan, develop and 
-                test location-based services in a densely populated and service intensive urban environment
-            </p>
-            <br/>
-            <div class="col-md-8 col-md-push-2 text-light">
-                <p>Open test site for any organization to trial location based services seamlessly indoors and outdoors</p>
-                <p>Access to Here Location Suite</p>
-                <p>Pre-made indoor maps e.g. University of Tampere</p>
-                <p>Test facilities with location beacons and test apps available</p>
-                <p>Information and training</p>                
-            </div>
-
-        </div>
-    </div>
-
-
+    
     <div class="block">
         <div class="container text-center">
             <div class="separator">
@@ -117,6 +95,27 @@ $splash_url = $src[0];
         ?>
 
     </section> <!-- cd-timeline -->
+
+    <div id="block2" class="block padding-b60">
+        <div class="container text-center">
+            <div class="separator">
+                <h1 class="separator-content">We offer</h1>
+            </div>
+            <p>
+                A test site for companies and organisations where they can plan, develop and 
+                test location-based services in a densely populated and service intensive urban environment
+            </p>
+            <br/>
+            <div class="col-md-8 col-md-push-2 text-light">
+                <p>Open test site for any organization to trial location based services seamlessly indoors and outdoors</p>
+                <p>Access to Here Location Suite</p>
+                <p>Pre-made indoor maps e.g. University of Tampere</p>
+                <p>Test facilities with location beacons and test apps available</p>
+                <p>Information and training</p>                
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <?php include 'inc/partners.php';?>
