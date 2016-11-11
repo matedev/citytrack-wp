@@ -65,25 +65,26 @@ $splash_url = $src[0];
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-push-1">
-                <div class="col-md-4 col-sm-3 col-xs-6 img-container">
-                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners2.jpg ?>">
-                </div>
-                <div class="col-md-4 col-sm-3 col-xs-6 img-container">
-                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners4.jpg ?>">
-                </div>
-                <div class="col-md-4 col-sm-3 col-xs-6 img-container">
-                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners5.jpg ?>">
-                </div>
-                  
+                    <div class="col-sm-4 col-xs-12 img-container">
+                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners2.jpg ?>">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 img-container">
+                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners4.jpg ?>">
+                    </div>
+                    <div class="col-sm-4 col-xs-12 img-container">
+                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners5.jpg ?>">
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-md-push-2 col-sm-3 col-xs-6 img-container">
+            <div class="col-md-10 col-md-push-1">
+                <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
                     <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners1.jpg ?>">
                 </div>
-                <div class="col-md-4 col-md-push-2 col-sm-3 col-xs-6 img-container">
+                <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
                     <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners3.jpg ?>">
-                </div>                
+                </div>   
+            </div>                
             </div>  
         </div>
     </div>
