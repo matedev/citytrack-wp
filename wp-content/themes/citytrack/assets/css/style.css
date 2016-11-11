@@ -491,14 +491,15 @@ footer {
 */
 
 #main .splash-block {
-    background-attachment: fixed;
-    background-image: url(../img/splash1.jpg);
+    /*background-attachment: fixed;*/
+    background-image: url(../img/main_photo2.jpg);
     height: 600px;
     margin-top: 84px;
 }
 
 #img-phone {
-    margin-top: 138px;
+    margin-top: 115px;
+    margin-left: -24px;
 }
 
 #main .block p{
