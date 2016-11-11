@@ -30,22 +30,24 @@ $splash_url = $src[0];
         </div>
     </div>
 
-    <div id="block2" class="block">
+    <div id="block2" class="block padding-b60">
         <div class="container text-center">
             <div class="separator">
-                <h1 class="separator-content">Test Site</h1>
+                <h1 class="separator-content">We offer</h1>
             </div>
-            <?php 
-                if ( have_posts() ) {
-                    while ( have_posts() ) {
-                        the_post(); ?>         
-                        <?php the_content(); ?>
-                    <?php }
-                }
-            ?>
-            <p class="padding-50">
-                <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'>Contact Us</button>
+            <p>
+                A test site for companies and organisations where they can plan, develop and 
+                test location-based services in a densely populated and service intensive urban environment
             </p>
+            <br/>
+            <div class="col-md-8 col-md-push-2 text-light">
+                <p>Open test site for any organization to trial location based services seamlessly indoors and outdoors</p>
+                <p>Access to Here Location Suite</p>
+                <p>Pre-made indoor maps e.g. University of Tampere</p>
+                <p>Test facilities with location beacons and test apps available</p>
+                <p>Information and training</p>                
+            </div>
+
         </div>
     </div>
 
@@ -115,33 +117,7 @@ $splash_url = $src[0];
         ?>
 
     </section> <!-- cd-timeline -->
-
-
-    <div class="container separator">
-        <h1 class="separator-content">CityTrack Project Partners</h1>
-    </div>
-
-    <div id="partner-block" class="block">
-        <div class="container">
-            <div class="row">
-                <?php
-                    if ( have_rows('partner_logos','option') ):
-                        while ( have_rows('partner_logos','option') ) : the_row(); 
-                ?>
-                            <div class="col-md-3 col-sm-4 col-xs-6 img-container">
-                                <a href="<?php the_sub_field('url'); ?>" target="_blank">
-                                    <span class="helper"></span><img class="img-class" src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>"
-                                     alt="<?php the_sub_field('name'); ?>">
-                                 </a>
-                            </div>
-                <?php
-                        endwhile;
-                    endif;
-                ?>
-            </div>
-        </div>
-    </div>
 </div>
 
-<?php include 'footer.php';?>
+<?php include 'inc/partners.php';?>
 <?php get_footer(); ?>
