@@ -5,18 +5,6 @@
                     <?php
                         the_field('footer_column_1','option');
                     ?>
-                    <!--h2>CityTrack Project</h2>
-                    <p class="text-light padding-30">
-                        CityTrack is a project of university of Tampere. The project seeks to combine 
-                        seamless indoor and outdoor positioning with other open data to provide both 
-                        local business and consumers with new opportunities and possibilities.
-                    </p>
-                    <p>
-                        <strong>Interested? Got questions? 
-                        Feedback?</strong> Send email to 
-                        <strong><a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a></strong>.
-                        
-                    </p-->
                 </div>
                 <div class="col-md-4 text-center">
                 <?php
@@ -45,7 +33,7 @@
                         endwhile;
                     endif;    
                 ?>
-                    <p class="text-center text-regular padding-50">
+                    <p class="text-center text-regular padding-t50">
                         <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
                     </p>
                 </div>
@@ -74,6 +62,18 @@
                             });
                         };
                     </script>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-push-1 text-center padding-t30 text-light">
+                    <p>The CityTrack research project is funded by 
+                        <a class="text-regular" title="Tekes website" href="http://www.tekes.fi/" 
+                            rel="nofollow" target="_blank">
+                            Tekes – the Finnish Funding Agency for Innovation
+                        </a>.
+                    </p>
                 </div>
             </div>
         </div>
