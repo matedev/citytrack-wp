@@ -13,7 +13,10 @@ html {
 
 h1 {
     font-size: 36px;
-    line-height: 1.3;   
+}
+
+h2 {
+    font-family: 'Open-Sans-600';   
 }
 
 s h2 {
@@ -102,8 +105,6 @@ p {
 }
 
 .block .container h2 {
-    font-family: 'Open-Sans-600';
-    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -253,6 +254,10 @@ p {
     width: 100%;
 }
 
+.separator h1.separator-content{
+    line-height: 1.7;
+}
+
 .separator .separator-content:before,
 .separator .separator-content:after {
     content: "";
@@ -270,7 +275,6 @@ p {
 .separator.partner-separator {
     margin-bottom: 0;
     margin-top: 0;
-    padding-top: 30px;
 }
 
 /**
@@ -544,7 +548,7 @@ footer {
 }
 
 #partners #block1 h2{
-    color: #115788;
+    /*color: #115788;*/
 }
 #partners #block1 p{
    
@@ -642,7 +646,7 @@ footer {
 }
 
 #users .block h2{
-    color: #115788;
+    /*color: #115788;*/
 }
 
 #users .block p{
@@ -843,4 +847,13 @@ footer {
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+.block h2:first-child{
+    margin-top: 0;
+    padding-top: 0;   
+}
+
+.block h2{
+    margin-top: 30px;
 }
