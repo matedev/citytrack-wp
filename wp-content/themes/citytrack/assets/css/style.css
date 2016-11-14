@@ -353,7 +353,7 @@ p {
 }
 
 #map {
-    height: 270px;
+    height: 238px;
     margin: 0 auto;
     width: 305px;
 }
@@ -571,6 +571,10 @@ footer {
     color: #535353;
 }
 
+#partners #block2 ul{
+    list-style-image: url(../img/arrow2.png);
+}
+
 #partner-block,
 #partner-list {
     margin-bottom: 20px;
@@ -715,6 +719,13 @@ footer {
     #partner-block .img-class,
     #partner-list .img-class{
         width: 40%;
+    }
+
+    #footer .row .col-md-8,
+    #footer .row .col-md-4,
+    #footer .row .col-sm-8,
+    #footer .row .col-sm-4{
+        text-align: center;
     }
 }
 

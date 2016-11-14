@@ -7,6 +7,7 @@
         $('#block3 .img-container').matchHeight();
         $('#partner-block .img-container').matchHeight();
         $('#partner-list .img-container').matchHeight();
+        $('#footer .same-height').matchHeight();
 
         /*$('.users-description').truncate({
             'maxLines': 5,

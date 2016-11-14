@@ -7,14 +7,14 @@
                             the_field('footer_column_1','option');
                         ?>                    
                     </div>
-                    <div class="col-md-8 no-padding">
-                        <strong>Interested? Got questions? Feedback?</strong> <br/>
+                    <div class="col-sm-8 no-padding same-height">
+                        <strong>Interested? Got questions?</strong> <br/>
                         Send email to <strong><a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a></strong>.
                          <p class="text-regular">
                             <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
                         </p>                          
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-sm-4 same-height">
                         <h2 class=" padding-t10 text-light">Follow Us</h2>
                         <?php
                             if ( have_rows('footer_column_2','option') ):
@@ -22,7 +22,7 @@
                         ?>
                                     <ul class="social-list">
                                     <?php if(get_sub_field('facebook') ): ?>
-                                        <li><a href="<?php the_sub_field('facebook'); ?>" class="fa fa-facebook fa-2x"></a></li>
+                                        <?php /* <li><a href="<?php the_sub_field('facebook'); ?>" class="fa fa-facebook fa-2x"></a></li> */?>
                                     <?php
                                         endif;    
                                     ?>
