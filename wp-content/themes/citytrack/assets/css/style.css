@@ -57,6 +57,10 @@ p {
     margin: 0;
 }
 
+.padding-t10{
+    padding-top: 10px;
+}
+
 .padding-30 {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -300,7 +304,7 @@ p {
 
 #footer .social-list {
     list-style: none;
-    margin: 0;
+    margin: 20px 0px 0px 0px;
     padding: 0;
 }
 
@@ -330,11 +334,13 @@ p {
     width: 60px;
 }
 
-#footer div.col-md-4{
+#footer div.col-md-4,
+#footer div.col-md-8{
     padding-top: 30px;
 }
 
-#footer div.col-md-4:nth-child(odd) p:first-of-type{
+#footer div.col-md-4:nth-child(even) p:first-of-type,
+#footer div.col-md-8:nth-child(odd) p:first-of-type{
     font-family: "Open-Sans-light";
     padding-top: 30px;
     padding-bottom: 30px;
@@ -347,7 +353,7 @@ p {
 }
 
 #map {
-    height: 284px;
+    height: 270px;
     margin: 0 auto;
     width: 305px;
 }
@@ -355,10 +361,6 @@ p {
 footer {
     font-size: 14px;
     margin: 20px 0px 20px 0px;
-}
-
-#footer div.container:last-child{
-    font-size: 18px;
 }
 
 /**
@@ -507,7 +509,7 @@ footer {
 
 #main .splash-block {
     /*background-attachment: fixed;*/
-    background-image: url(../img/main_photo2.jpg);
+    background-image: url(../img/main_photo.jpg);
     height: 600px;
     margin-top: 84px;
 }
@@ -547,8 +549,8 @@ footer {
 }
 
 #partners #block2 {
-    background-image: url(../img/bg3.jpg);
-    padding-bottom: 43px;
+    /*background-image: url(../img/bg3.jpg);
+    padding-bottom: 43px;*/
 }
 
 #partners #block2 .separator{
@@ -583,11 +585,6 @@ footer {
 
 #partners #partner-block .img-class {
     max-width: 75%;
-}
-
-#partners .separator {
-    margin-top: 38px;
-    margin-bottom: 38px;
 }
 
 #blog .separator {
@@ -631,8 +628,7 @@ footer {
 
 #users .users-description {
     line-height: normal;
-    padding: 15px 15px 15px 15px;
-    text-align: justify;
+    padding: 15px 15px 0px 15px;
 }
 
 #users .users-description p {
@@ -650,7 +646,7 @@ footer {
 }
 
 #users .block1{
-    margin-top: 80px;
+    padding-top: 7px;
 }
 
 #users .block h2{
@@ -659,6 +655,10 @@ footer {
 
 #users .block p{
     font-family: "Open-Sans-light";
+}
+
+#users .partner-images-container {
+    padding-top: 36px;
 }
 
 

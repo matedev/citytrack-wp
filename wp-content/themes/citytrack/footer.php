@@ -1,11 +1,49 @@
     <div id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <?php
-                        the_field('footer_column_1','option');
-                    ?>
+                <div class="col-md-8">
+                    <div class="col-md-12 no-padding">
+                        <?php
+                            the_field('footer_column_1','option');
+                        ?>                    
+                    </div>
+                    <div class="col-md-8 no-padding">
+                        <strong>Interested? Got questions? Feedback?</strong> <br/>
+                        Send email to <strong><a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a></strong>.
+                         <p class="text-regular">
+                            <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
+                        </p>                          
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class=" padding-t10 text-light">Follow Us</h2>
+                        <?php
+                            if ( have_rows('footer_column_2','option') ):
+                                while ( have_rows('footer_column_2','option') ) : the_row(); 
+                        ?>
+                                    <ul class="social-list">
+                                    <?php if(get_sub_field('facebook') ): ?>
+                                        <li><a href="<?php the_sub_field('facebook'); ?>" class="fa fa-facebook fa-2x"></a></li>
+                                    <?php
+                                        endif;    
+                                    ?>
+                                    <?php if(get_sub_field('youtube') ): ?>
+                                        <li><a href="<?php the_sub_field('youtube'); ?>" class="fa fa-youtube fa-2x"></a></li>
+                                    <?php
+                                        endif;    
+                                    ?>
+                                    <?php if(get_sub_field('linkedin') ): ?>
+                                        <li><a href="<?php the_sub_field('linkedin'); ?>" class="fa fa-linkedin fa-2x"></a></li>
+                                    <?php
+                                        endif;
+                                    ?>                                                       
+                                    </ul>
+                        <?php
+                                endwhile;
+                            endif;    
+                        ?>
+                    </div>
                 </div>
+<?php /*                
                 <div class="col-md-4 text-center">
                 <?php
                     if ( have_rows('footer_column_2','option') ):
@@ -37,6 +75,7 @@
                         <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
                     </p>
                 </div>
+*/?>                
                 <div class="col-md-4 text-center">
                     <?php
                         the_field('footer_column_3','option');
@@ -65,21 +104,14 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-10 col-xs-push-1 text-center padding-t30 text-light">
-                    <p>The CityTrack research project is funded by 
-                        <a class="text-regular" title="Tekes website" href="http://www.tekes.fi/" 
-                            rel="nofollow" target="_blank">
-                            Tekes – the Finnish Funding Agency for Innovation
-                        </a>.
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer class="text-center">
+        <p>The CityTrack research project is funded by 
+            <a class="text-regular" title="Tekes website" href="http://www.tekes.fi/" 
+                rel="nofollow" target="_blank">
+                Tekes – the Finnish Funding Agency for Innovation</a>.
+        </p>
         <small class="text-blue text-light" >2016 &copy; All rights reserved</small>
     </footer>
 

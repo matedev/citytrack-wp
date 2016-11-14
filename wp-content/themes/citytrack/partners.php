@@ -9,13 +9,14 @@ $splash_url = $src[0];
 
 ?>
 <div id="partners">
-     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
+    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
+
+    <div class="container separator">
+        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="64px"></div>
+    </div>
 
     <div id="block1" class="block">
         <div class="container text-center">
-            <div class="separator">
-                <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
-            </div>
             <?php 
                 if ( have_posts() ) {
                     while ( have_posts() ) {
@@ -31,10 +32,8 @@ $splash_url = $src[0];
     </div>
     
 
-    <div class="container text-center">
-        <div class="separator">
-            <h1 class="separator-content">Events</h1>
-        </div>
+    <div class="container separator">
+        <h1 class="separator-content">Events</h1>
     </div>
     
     <section id="cd-timeline" class="cd-container">
@@ -96,11 +95,12 @@ $splash_url = $src[0];
 
     </section> <!-- cd-timeline -->
 
-    <div id="block2">
+    <div class="container separator">
+        <h1 class="separator-content">We offer</h1>
+    </div>
+
+    <div id="block2" class="block">
         <div class="container text-center">
-            <div class="separator">
-                <h1 class="separator-content">We offer</h1>
-            </div>
             <p>
                 A test site for companies and organisations where they can plan, develop and 
                 test location-based services in a densely populated and service intensive urban environment

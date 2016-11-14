@@ -10,10 +10,11 @@ $splash_url = $src[0];
 ?>
 
 <div id="users">
-    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
+    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);">
+    </div>
 
     <div class="container separator">
-        <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
+        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="64px"></div>
     </div>
 
     <div class="block1 block">
@@ -40,10 +41,11 @@ $splash_url = $src[0];
         </div>         
     </div>
 
+    <div class="container separator">
+        <h1 class="separator-content">Pilots of core partners</h1>
+    </div>
+
     <div class="block2 block">
-        <div class="container separator">
-            <h1 class="separator-content">Pilots of core partners</h1>
-        </div>
         <div class="container">
             <div class="row text-center">
                 <p>
@@ -62,7 +64,7 @@ $splash_url = $src[0];
                */ ?>
             </div>
         </div>
-        <div class="container">
+        <div class="container partner-images-container">
             <div class="row">
                 <div class="col-md-10 col-md-push-1">
                     <div class="col-sm-4 col-xs-12 img-container">
