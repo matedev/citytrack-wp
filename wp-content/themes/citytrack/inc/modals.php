@@ -5,29 +5,29 @@
       <div class="modal-header text-center text-light"><?php _e( 'Contact us', 'citytrack')?> </div>
 
       <div class="modal-body">
-        <form id="contactform" method="" role="form">
+        <form id="contactform" method="POST" role="form">
           <div class="form-group">
-            <label for="name" class="text-blue">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+            <label for="user-name" class="text-blue">Name</label>
+            <input type="text" class="form-control no-empty" id="user-name" name="user-name" placeholder="Enter your name">
           </div>
 
            <div class="form-group">
-            <label for="name" class="text-blue">E-mail</label>
-            <input type="text" class="form-control" id="e-mail" name="email" placeholder="Enter your e-mail">
+            <label for="user-email" class="text-blue">E-mail</label>
+            <input type="email" class="form-control no-empty" id="user-email" name="user-email" placeholder="Enter your e-mail">
           </div>
 
           <div class="form-group">
-            <label for="name" class="text-blue">Subject</label>
-            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject">
+            <label for=subject" class="text-blue">Subject</label>
+            <input type="text" class="form-control no-empty" id="subject" name="subject" placeholder="Enter subject">
           </div>
 
           <div class="form-group">
-            <label for="name" class="text-blue">Message</label>
-            <textarea name="msg" id="input" class="form-control" rows="3"></textarea>
+            <label for="message" class="text-blue">Message</label>
+            <textarea name="msg" id="input" name="message" class="form-control no-empty" rows="3"></textarea>
           </div>
 
           <div class="btnwrap text-right"> 
-            <button type="submit" class="btn btn-blue sendbtn">Send</button>
+            <button id="contancform-send" type="submit" class="btn btn-blue sendbtn">Send</button>
           </div>
         </form>
       </div>
@@ -46,13 +46,13 @@
         <p id="event-desc" class="text-light text-center"></p>
         <form id="attendform" method="" role="form">
           <div class="form-group">
-            <label for="name" class="text-blue">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+            <label for="user-name" class="text-blue">Name</label>
+            <input type="text" class="form-control no-empty" id="user-name" name="user-name" placeholder="Enter your name">
           </div>
 
            <div class="form-group">
-            <label for="name" class="text-blue">E-mail</label>
-            <input type="email" class="form-control" id="e-mail" name="email" placeholder="Enter your e-mail">
+            <label for="user-email" class="text-blue">E-mail</label>
+            <input type="email" class="form-control no-empty" id="user-email" name="user-email" placeholder="Enter your e-mail">
           </div>
 
           <div class="btnwrap text-right"> 

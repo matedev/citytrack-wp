@@ -34,7 +34,7 @@ function add_citytrack_scripts(){
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array('jquery'));
     wp_enqueue_script('timeline', get_template_directory_uri() . '/assets/js/timeline.js', array('jquery'));
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'));
-    wp_localize_script('main', "hatvani_ajax", array('ajaxurl' => admin_url('admin-ajax.php')));
+    wp_localize_script('main', "ct_ajax", array('ajaxurl' => admin_url('admin-ajax.php')));
 }
 
 add_action('wp_enqueue_scripts', 'add_citytrack_scripts');
@@ -215,143 +215,28 @@ function remove_shake() {
 
 add_action( 'login_head', 'remove_shake' );
 
-function hatvani_checkidopont_handle() {
+function ct_email_handle() {
 
-    $sql = "SELECT id FROM foglalasok WHERE munka_datum = '" . $_POST['datum'] . "' AND munka_ido = '". $_POST['idopont']  . "'";
-
-    global $wpdb;    
-    $results = $wpdb->get_results($sql, OBJECT );
-
-    $eloreora = get_field('idopontfoglalas_korlatozasa','option');
-
-    $date1 = new DateTime($_POST['datum'].'T'.$_POST['idopont'].":00+01:00");
-    $date2 = new DateTime();
-
-    $diff = $date2->diff($date1);
-    //die();
-    $hours = $diff->h;
-    $hours = $hours + ($diff->days*24);
-
-    //in the past
-    if ($date1<$date2){
-        echo('1');
-        wp_die();
-
-    }
-
-    //check the future
-    if ($hours<(int)$eloreora){
-        echo('1');
-        wp_die();
-    }
-
-    //mar foglalt
-    if (count($results) > 0){
-        echo('1');
-        wp_die();
-        return;
-    }
-
-    wp_die();
-}
-
-add_action('wp_ajax_hatvani_checkidopont', 'hatvani_checkidopont_handle');
-add_action('wp_ajax_nopriv_hatvani_checkidopont', 'hatvani_checkidopont_handle');
-
-function hatvani_konfigurator_handle() {
-    global $wpdb;
-
-    $data = array();
+    /*$data = array();
     foreach (@$_POST['konfigurator'] as $i) {
         $data[$i['name']] = $i['value'];
-    }
+    }*/
 
-    //echo( __(var_dump($data), "hatvani"));
-    //wp_die();
-
-    $content = "";
-    $content.="Név: " . $data['konf_vnev'] . "<br/>";
+    $content = "Digirisz";
+    echo "Digirisz";
+    /*$content.="Név: " . $data['konf_vnev'] . "<br/>";
     $content.="E-mail: " . $data['konf_mail'] . "<br/>";
     $content.="Telefon: " . $data['konf_tel'] . "<br/>";
     $content.="Szolgáltatás: " . $data['konf_szolg_tipus'] . "<br/>";
     $content.="Autó típusa: " . $data['konf_marka'] . ", " . $data['konf_auto'] . ", " . $data['konf_modell'] . "<br/>";
-    $content.="Megjegyzés: " . $data['konf_megj'];
+    $content.="Megjegyzés: " . $data['konf_megj'];*/
 
     
     //mail
-    wp_mail(get_option('admin_email'), "Új ajánlatkérés érkezett", $content, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail("kis.kiraly.mate@gmail.com", "Új ajánlatkérés érkezett", $content, array('Content-Type: text/html; charset=UTF-8'));
 
     wp_die();
 }
 
-add_action('wp_ajax_hatvani_konfigurator', 'hatvani_konfigurator_handle');
-add_action('wp_ajax_nopriv_hatvani_konfigurator', 'hatvani_konfigurator_handle');
-
-
-function hatvani_foglalas_handle() {
-    global $wpdb;
-
-    $data = array();
-    foreach (@$_POST['foglalas'] as $i) {
-        $data[$i['name']] = $i['value'];
-    }
-
-
-    $sql = "SELECT id FROM foglalasok WHERE munka_datum = '" . $data[ido_datum] . "' AND munka_ido = '". $data[ido_idopont] . "'";
-
-
-    global $wpdb;    
-    $results = $wpdb->get_results($sql, OBJECT );
-
-    if (count($results) > 0){
-        echo('1');
-        wp_die();
-        return;
-    }
-
-
-    $content = "";
-    $content.="Tisztelt " . $data['ido_nev'] . "<br/><br/>";
-    $content = "Köszönjük regisztrációját!<br/>" ;
-    $content = "Az Ön idopontja:" . $data['ido_datum'] . " " . $data['ido_idopont'] . ".<br/><br/>";
-    $content.= "Kérjük, 10 perccel a foglalása elotte jelenjen meg, és jelentkezzen a munkafelvételen, különben a foglalása nem garantálható. <br/><br/>";
-    $content.= "Üdvözlettel, <br/>";
-    $content.= "A Hatvani Gumiszerviz csapata";
-
-    $content2 = "";
-    $content2.="Új foglalás:" . $data['konf_vnev'] . "<br/><br/>";
-    $content2.="Idopont: " . $data['ido_datum'] . " " . $data['ido_idopont'] . "<br/>";
-    $content2.="Jármu: " . $data['ido_marka'] . " " . $data['ido_auto_tipus'] . "<br/>";
-    $content2.="Jármu kategória: " . $data['ido_kat'] . "<br/>";
-    $content2.="Rendszám: " . $data['ido_auto_rsz'] . "<br/>";
-    $content2.="Muszaki érvényesség: " . $data['ido_muszaki'] . "<br/>";
-    $content2.="Ügyfél: " . $data['ido_nev'] . ", " . $data['ido_email'] . ", " . $data['ido_telefon']."<br/>";
-    $content2.="Igényelt szolgáltatás: "  .$data['ido_szolg_tipus'];
-    
-    //save to file
-    if (isset($data['newsletter'])) {
-        $file = get_home_path() . "mailchimp/list-" . date('Y-m') . ".csv";
-        $fp = fopen($file, 'a');
-        if ($fp) {
-            fputcsv($fp, array(date("Y-m-d H:i:s"), $data['email'], $data['name']));
-            fclose($fp);
-        } else {
-            $content.="<br/>There is problem with mailchimp export.";
-        }
-    }
-
-    $sql = "INSERT INTO foglalasok (auto_rsz, user_mail, user_nev, user_tel, auto_marka, auto_tipus, auto_muszaki,munka_nev, munka_datum, munka_ido, munka_tipus)
-    VALUES ('$data[ido_auto_rsz]', '$data[ido_email]', '$data[ido_nev]', '$data[ido_telefon]', '$data[ido_marka]','$data[ido_auto_tipus]', '$data[ido_muszaki]', '$data[ido_szolg_tipus]','$data[ido_datum]', '$data[ido_idopont]','$data[ido_szolg_num]' )";
-
-    global $wpdb;
-    $results = $wpdb->get_results($sql, OBJECT );
-
-    //mail
-    wp_mail($data['ido_email'], "Hatvani visszaigazolás", $content, array('Content-Type: text/html; charset=UTF-8'));
-    wp_mail(get_option('admin_email'), "[" .$data['ido_szolg_tipus']. "] Új foglalás", $content2, array('Content-Type: text/html; charset=UTF-8'));
-    
-    wp_die();
-}
-
-add_action('wp_ajax_hatvani_foglalas', 'hatvani_foglalas_handle');
-add_action('wp_ajax_nopriv_hatvani_foglalas', 'hatvani_foglalas_handle');
+add_action('wp_ajax_ct_email', 'ct_email_handle');
+add_action('wp_ajax_nopriv_ct_email', 'ct_email_handle');
