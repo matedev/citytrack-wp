@@ -1,18 +1,29 @@
 <?php get_header(); ?>
-<div class="pagetitlebar pageid_<?php echo the_ID();?>" style="height: 340px;background-image: url('<?php echo get_template_directory_uri();?>/img/404.png'); background-size: contain;
-    background-position: center center;background-repeat: no-repeat;">
-</div>
 
-<div class="container">
-	<div class="pcontent">
-		<main id="main" class="site-main" role="main">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center page404">
-					<p><?php echo __('Az Ön által keresett oldal sajnos nem található.','cordia'); ?></p>
-						<p><?php echo __('Kérjük, látogasson el a <a href="'. get_bloginfo('url') .'">főoldalunkra</a> és válogasson kedvére projektjeink közül!','cordia'); ?></p>
+<div id="main">
+    <div class="splash-block">
+        <div class="container">
+            <img src="<?php echo get_template_directory_uri()?>/assets/img/phone.png" id="img-phone">
+        </div>  
+    </div>
+
+    <div class="container separator">
+        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="64px"></div>
+    </div>
+
+
+	<div class="container block">
+		<div class="pcontent">
+			<main id="main" class="site-main" role="main">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center page404">
+						<h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'citytrack' ); ?></h2>
+						<p>It looks like nothing was found at this location. Go back to the <a href="<?php echo get_home_url(); ?>">front page</p>
 					</div>
 				</div>
 			</main>
 		</div>
 	</div>
-	<?php get_footer(); ?>
+</div>
+
+<?php get_footer(); ?>
