@@ -23,19 +23,25 @@
         $('#partner-block .img-container').slice(-2).addClass("col-md-push-3");
         $('#partner-block .img-container').slice(-1).addClass("col-sm-push-4");
 
-        $( "#contantform-send" ).bind( "click", function() {
+        $( "#contantform-send" ).bind( "click", function(event) {
             event.preventDefault();
             if (validateForm("contactform")){
+                console.log("bugidisy");
                 $('#modal-contact').modal('hide');
                 $("#modal-contact #contactform").submit();
             }
         });  
 
         $( "#modal-contact #contactform" ).submit(function( event ) {
-            ct_mailsubmit($('#modal-contact #contactform').serialize());
+            ct_mailsubmit($('#modal-contact #contactform').serializeArray());
             event.preventDefault();
             return false;
         });
+
+        $('#modal-contact').on('hidden.bs.modal', function () {
+            $("#modal-contact .no-empty").removeClass("warning");
+        })
+
 
     });
 
@@ -59,10 +65,10 @@
         return ok;
     }
 
-
     function ct_mailsubmit(formdata) {
         jQuery.post(ct_ajax.ajaxurl, {
-            'action': 'ct_email'
+            'action': 'ct_email',
+            'contact_data': formdata
         }, function (response) {
             if (response == 'error'){
                 $('#error-modal').modal('show');
@@ -79,6 +85,27 @@
             }
             $("#modal-contact #contactform").trigger('reset');
         });
+    }
+
+    function ct_attendsubmit(formdata){
+        jQuery.post(ct_ajax.ajaxurl, {
+            'action': 'ct_attend'
+        }, function (response) {
+            if (response == 'error'){
+                $('#error-modal').modal('show');
+                $('#error-modal .modal-body').empty();
+                $('#error-modal .modal-header').empty();
+                $('#error-modal .modal-header').append('<h1>Sorry</h1>!');
+                $('#error-modal .modal-body').append('Something went wrong!<br/><br/>');
+            }else{  
+                $('#error-modal').modal('show');
+                $('#error-modal .modal-body').empty();
+                $('#error-modal .modal-header').empty();
+                $('#error-modal .modal-header').append('<h1>Thank you for your interest!</h1>');
+                $('#error-modal .modal-body').append('We received your registration.<br/><br/>An e-mail has been sent to your address, with the details.<br/><br/>See you soon!');
+            }
+            $("#modal-contact #contactform").trigger('reset');
+        });        
     }
 
 })(jQuery);

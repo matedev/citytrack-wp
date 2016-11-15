@@ -217,23 +217,34 @@ add_action( 'login_head', 'remove_shake' );
 
 function ct_email_handle() {
 
-    /*$data = array();
-    foreach (@$_POST['konfigurator'] as $i) {
+    $data = array();
+    foreach (@$_POST['contact_data'] as $i) {
         $data[$i['name']] = $i['value'];
-    }*/
+    }
 
-    $content = "Digirisz";
     echo 1;
-    /*$content.="Név: " . $data['konf_vnev'] . "<br/>";
-    $content.="E-mail: " . $data['konf_mail'] . "<br/>";
-    $content.="Telefon: " . $data['konf_tel'] . "<br/>";
-    $content.="Szolgáltatás: " . $data['konf_szolg_tipus'] . "<br/>";
-    $content.="Autó típusa: " . $data['konf_marka'] . ", " . $data['konf_auto'] . ", " . $data['konf_modell'] . "<br/>";
-    $content.="Megjegyzés: " . $data['konf_megj'];*/
+    $content_to_user = "";
+    $content_to_user.= "Dear " . $data['user-name'] . "<br/><br/>";
+    $content_to_user.= "Thank you for your interest! We received your message and will contact you soon.<br/><br/>" ;
+    $content_to_user.= "Your message: " . $data['message'] . ".<br/><br/>";
+    $content_to_user.= "Best regards, <br/>";
+    $content_to_user.= "CityTrack team";
+
+    $subject_to_user = "[CityTrack automatic reply] " . $data['subject'];
+
+    $content_to_admin = "";
+    $content_to_admin.= "New message from " . $data['user-name'] . "<br/><br/>";
+    $content_to_admin.= "Name: " . $data['user-name'] . "<br/>";
+    $content_to_admin.= "E-mail: " . $data['user-email'] . "<br/>";
+    $content_to_admin.= "Subject: " . $data['subject'] . "<br/>";
+    $content_to_admin.= "Message: " . $data['message'];
+
+    $subject_to_admin = "New message from " . $data['user-name'] . " on CityTrack";
 
     
     //mail
-    wp_mail("kis.kiraly.mate@gmail.com", "Új ajánlatkérés érkezett", $content, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail(get_option('admin_email'), $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail($data['user-email'], $subject_to_user, $content_to_user, array('Content-Type: text/html; charset=UTF-8'));
 
     wp_die();
 }

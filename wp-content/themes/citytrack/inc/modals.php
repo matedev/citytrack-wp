@@ -23,7 +23,7 @@
 
           <div class="form-group">
             <label for="message" class="text-blue">Message</label>
-            <textarea name="msg" id="input" name="message" class="form-control no-empty" rows="3"></textarea>
+            <textarea id="message" name="message" class="form-control no-empty" rows="3"></textarea>
           </div>
 
           <div class="btnwrap text-right"> 
