@@ -54,9 +54,9 @@
             <label for="user-email" class="text-blue">E-mail</label>
             <input type="email" class="form-control no-empty" id="user-email" name="user-email" placeholder="Enter your e-mail">
           </div>
-
+          
           <div class="btnwrap text-right"> 
-            <button type="submit" class="btn btn-blue sendbtn">Attend</button>
+            <button id="attendform-send" type="submit" class="btn btn-blue sendbtn">Attend</button>
           </div>
         </form>
       </div>

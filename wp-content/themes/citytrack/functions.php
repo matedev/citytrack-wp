@@ -251,3 +251,40 @@ function ct_email_handle() {
 
 add_action('wp_ajax_ct_email', 'ct_email_handle');
 add_action('wp_ajax_nopriv_ct_email', 'ct_email_handle');
+
+function ct_attend_handle() {
+
+    $data = array();
+    foreach (@$_POST['attend_data'] as $i) {
+        $data[$i['name']] = $i['value'];
+    }
+
+    echo 1;
+    $content_to_user = "";
+    $content_to_user.= "Dear " . $data['user-name'] . "<br/><br/>";
+    $content_to_user.= "Thank you for attending! We received your registration.<br/><br/>" ;
+    $content_to_user.= "See you soon, <br/>";
+    $content_to_user.= "CityTrack team";
+
+    $subject_to_user = "[CityTrack automatic reply] Successfull registration";
+
+    $content_to_admin = "";
+    $content_to_admin.= "New registration from " . $data['user-name'] . "<br/><br/>";
+    $content_to_admin.= "Name: " . $data['user-name'] . "<br/>";
+    $content_to_admin.= "E-mail: " . $data['user-email'] . "<br/>";
+/*
+    $content_to_admin.= "Subject: " . $data['subject'] . "<br/>";
+    $content_to_admin.= "Message: " . $data['message'];
+*/
+    $subject_to_admin = "New registration from " . $data['user-name'] . " on CityTrack";
+
+    
+    //mail
+    wp_mail(get_option('admin_email'), $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail($data['user-email'], $subject_to_user, $content_to_user, array('Content-Type: text/html; charset=UTF-8'));
+
+    wp_die();
+}
+
+add_action('wp_ajax_ct_attend', 'ct_attend_handle');
+add_action('wp_ajax_nopriv_ct_attend', 'ct_attend_handle');

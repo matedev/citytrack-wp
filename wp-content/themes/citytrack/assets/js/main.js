@@ -26,13 +26,12 @@
         $( "#contantform-send" ).bind( "click", function(event) {
             event.preventDefault();
             if (validateForm("contactform")){
-                console.log("bugidisy");
                 $('#modal-contact').modal('hide');
                 $("#modal-contact #contactform").submit();
             }
         });  
 
-        $( "#modal-contact #contactform" ).submit(function( event ) {
+        $("#modal-contact #contactform").submit(function( event ) {
             ct_mailsubmit($('#modal-contact #contactform').serializeArray());
             event.preventDefault();
             return false;
@@ -42,7 +41,23 @@
             $("#modal-contact .no-empty").removeClass("warning");
         })
 
+        $("#attendform-send").bind( "click", function(event) {
+            event.preventDefault();
+            if (validateForm("attendform")){
+                $('#modal-attend').modal('hide');
+                $("#modal-attend #attendform").submit();
+            }
+        });  
 
+        $("#modal-attend #attendform").submit(function( event ) {
+            ct_attendsubmit($('#modal-attend #attendform').serializeArray());
+            event.preventDefault();
+            return false;
+        });
+
+        $('#modal-attend').on('hidden.bs.modal', function () {
+            $("#modal-attend .no-empty").removeClass("warning");
+        })
     });
 
     $(document).on("click", ".btn-attend", function () {
@@ -89,7 +104,8 @@
 
     function ct_attendsubmit(formdata){
         jQuery.post(ct_ajax.ajaxurl, {
-            'action': 'ct_attend'
+            'action': 'ct_attend',
+            'attend_data': formdata
         }, function (response) {
             if (response == 'error'){
                 $('#error-modal').modal('show');
@@ -101,10 +117,10 @@
                 $('#error-modal').modal('show');
                 $('#error-modal .modal-body').empty();
                 $('#error-modal .modal-header').empty();
-                $('#error-modal .modal-header').append('<h1>Thank you for your interest!</h1>');
-                $('#error-modal .modal-body').append('We received your registration.<br/><br/>An e-mail has been sent to your address, with the details.<br/><br/>See you soon!');
+                $('#error-modal .modal-header').append('<h1>Thank you for attending!</h1>');
+                $('#error-modal .modal-body').append('We received your registration');
             }
-            $("#modal-contact #contactform").trigger('reset');
+            $("#modal-attend #attendform").trigger('reset');
         });        
     }
 
