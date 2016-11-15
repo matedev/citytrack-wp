@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <div class="modal-header text-center text-light"><?php _e( 'Contact us', 'citytrack')?> </div>
+      <div class="modal-header text-center text-light"><h1><?php _e( 'Contact us', 'citytrack')?></h1></div>
 
       <div class="modal-body">
         <form id="contactform" method="POST" role="form">
@@ -27,7 +27,7 @@
           </div>
 
           <div class="btnwrap text-right"> 
-            <button id="contancform-send" type="submit" class="btn btn-blue sendbtn">Send</button>
+            <button id="contantform-send" type="submit" class="btn btn-blue sendbtn">Send</button>
           </div>
         </form>
       </div>
@@ -40,7 +40,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <div class="modal-header text-center text-light"><h1>Attend to the</h1></div>
+      <div class="modal-header text-center text-light"><h1></h1></div>
 
       <div class="modal-body">
         <p id="event-desc" class="text-light text-center"></p>
@@ -63,4 +63,15 @@
 
     </div>
   </div>
+</div>
+
+<div id="error-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <div class="modal-header text-center text-light"><h1></h1></div>
+          <div class="modal-body text-center">
+          </div>
+        </div>
+    </div>
 </div>

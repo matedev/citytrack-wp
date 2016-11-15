@@ -223,7 +223,7 @@ function ct_email_handle() {
     }*/
 
     $content = "Digirisz";
-    echo "Digirisz";
+    echo 1;
     /*$content.="Név: " . $data['konf_vnev'] . "<br/>";
     $content.="E-mail: " . $data['konf_mail'] . "<br/>";
     $content.="Telefon: " . $data['konf_tel'] . "<br/>";

@@ -23,12 +23,19 @@
         $('#partner-block .img-container').slice(-2).addClass("col-md-push-3");
         $('#partner-block .img-container').slice(-1).addClass("col-sm-push-4");
 
-        $( "#contactform" ).submit(function( event ) {
+        $( "#contantform-send" ).bind( "click", function() {
             event.preventDefault();
-            if (validateForm($(this).attr('id'))){
-                ct_mailsubmit($('#modal-contact #contactform').serialize());
+            if (validateForm("contactform")){
+                $('#modal-contact').modal('hide');
+                $("#modal-contact #contactform").submit();
             }
-        });   
+        });  
+
+        $( "#modal-contact #contactform" ).submit(function( event ) {
+            ct_mailsubmit($('#modal-contact #contactform').serialize());
+            event.preventDefault();
+            return false;
+        });
 
     });
 
@@ -36,13 +43,10 @@
         var mTitle = $(this).data('title');
         var mDesc = $(this).data('desc');
         var mDate = $(this).data('date');
-        $(".modal-header h1").text("Attend to the " + mTitle);
+        $("#modal-attend .modal-header h1").text("Attend to the " + mTitle);
         $("#event-desc").text(mDesc);
     });
 
-    $( "#modal-contact #contactform" ).submit(function( event ) {
-      event.preventDefault();
-    });
 
     function validateForm(id){
         var ok = true;
@@ -60,22 +64,20 @@
         jQuery.post(ct_ajax.ajaxurl, {
             'action': 'ct_email'
         }, function (response) {
-            console.log(response);
-            /*if (response == '1'){
+            if (response == 'error'){
                 $('#error-modal').modal('show');
                 $('#error-modal .modal-body').empty();
-                $('#error-modal .modal-title').empty();
-                $('#error-modal .modal-title').append('Sajnáluk!');
-                $('#error-modal .modal-body').append('A kért időpontra a foglalás nem lehetséges, kérjük válasszon másikat!<br/><br/>');
-                $('#error-modal .modal-body').append('Sürgős esetben kérjük hívja a következő számot: 06/96/523-020.');
-            }else{
+                $('#error-modal .modal-header').empty();
+                $('#error-modal .modal-header').append('<h1>Sorry</h1>!');
+                $('#error-modal .modal-body').append('Something went wrong!<br/><br/>');
+            }else{  
                 $('#error-modal').modal('show');
                 $('#error-modal .modal-body').empty();
-                $('#error-modal .modal-title').empty();
-                $('#error-modal .modal-title').append('Köszönjük!');
-                $('#error-modal .modal-body').append('Foglalását a kért időpontra regisztráltuk!<br/><br/>');
-                $('#fogl-form').trigger('reset');
-            }*/
+                $('#error-modal .modal-header').empty();
+                $('#error-modal .modal-header').append('<h1>Thank you for your interest!</h1>');
+                $('#error-modal .modal-body').append('We will contact you soon');
+            }
+            $("#modal-contact #contactform").trigger('reset');
         });
     }
 

@@ -459,7 +459,7 @@ footer {
     text-shadow: none;
 }
 
-#modal-contact .modal-dialog {
+.modal .modal-dialog {
     max-width: 600px;
 }
 
@@ -473,6 +473,9 @@ footer {
     background-image: url("../img/bg4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.modal-header h1{
     color: #fff;
     font-size: 24px;
     padding: 33px 0px 33px 0px;
