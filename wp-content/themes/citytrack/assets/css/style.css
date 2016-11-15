@@ -292,7 +292,7 @@ p {
     color: #fff;
     line-height: 1.42857143;
     font-size: 23px;
-    padding: 0px 0px 53px 0px;
+    padding: 0px 0px 26px 0px;
 }
 
 #footer a,
@@ -469,8 +469,6 @@ footer {
     width: 100%;
 }
 
-
-
 .modal-header {
     background-image: url("../img/bg4.jpg");
     background-size: cover;
@@ -499,6 +497,10 @@ footer {
 
 .modal-body button[type=submit]{
     margin-top: 15px;
+}
+
+.warning{
+    border: 1px solid red;
 }
 
 /**
@@ -671,6 +673,20 @@ footer {
 *
 * Media queries applied all over the site.
 */
+
+
+@media (max-width: 280px){
+    #map {
+        width: 150px;
+        height: : 150px;
+    }
+}
+
+@media (max-width: 350px){
+    #map {
+        width: 238px;
+    }
+}
 
 @media (min-width: 616px) {
     #modal-contact .modal-body input {
