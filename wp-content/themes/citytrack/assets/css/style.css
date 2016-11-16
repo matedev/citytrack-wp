@@ -606,10 +606,6 @@ footer {
     max-width: 75%;
 }
 
-#blog .separator {
-    margin-bottom: 50px;
-}
-
 /**
 * Blog page style
 *
@@ -624,6 +620,10 @@ footer {
     margin-top: 84px;
 }
 
+#blog .separator {
+    margin-bottom: 50px;
+}
+
 #blog #posts .post-header p {
     background-color: #f5f5f5;
     color: #115788;
@@ -635,9 +635,32 @@ footer {
     margin-bottom: 50px;
 }
 
+#blog #posts .apost .post-body {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 32px;
+}
+
 #blog #posts .post-text {
     font-size: 22px;
     line-height: normal;
+}
+
+#blog #posts .apost .post-img{
+    float: left;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 50px;
+}
+
+#blog #posts .apost .btn-hide,
+#blog #posts .apost .btn-show{
+    float: right;
+}
+
+/* Must be overrided as Bootstrap has its own hide class */
+#blog #posts .apost a.btn-hide.hide {
+    display: block !important;
 }
 
 /**
@@ -653,11 +676,6 @@ footer {
 
 #users .users-description p {
     margin-top: 20px;
-}
-
-/* Must be overrided as Bootstrap has its own hide class */
-#users .users-description a.hide {
-    display: block !important;
 }
 
 #users .users-description a {
@@ -756,6 +774,10 @@ footer {
     #footer .row .col-sm-8,
     #footer .row .col-sm-4{
         text-align: center;
+    }
+
+    #blog #posts .apost .post-img{
+        float:none;
     }
 }
 

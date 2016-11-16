@@ -9,11 +9,13 @@
         $('#partner-list .img-container').matchHeight();
         $('#footer .same-height').matchHeight();
 
-        /*$('.users-description').truncate({
+        $('.post-body').truncate({
             'maxLines': 5,
             'truncateString': '&nbsp;&#8230;',
-            'showText': 'Read More', 'hideText': "Read Less", 'animate':true
-        });*/
+            'showText': 'Read More',
+            'hideText': "Read Less"/*, 
+            'animate':true*/
+        });
 
         $(' #blog #posts .apost .img-container img').addClass("img-responsive");
 

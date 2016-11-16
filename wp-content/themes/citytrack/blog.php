@@ -38,20 +38,17 @@ $custom_query = new WP_Query( $args );
                     <strong> by <span id="post-author"><?php the_author(); ?></span></strong></p>
                 
             </div>
-            <div class="post-img col-md-5">
+            <div class="post-img">
                 <div class="img-container text-center">
                     <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
                 </div>
             </div>
-            <div class="post-body col-md-7">
+            <div class="post-body">
                 <h1 class="post-title text-blue">
                     <?php the_title(); ?>
                 </h1>
                 <p class="post-text demo1">
-                    <?php the_excerpt(); ?>
-                </p>
-                <p class="text-right">
-                    <button type="button" class="btn btn-blue" data-toggle="" href=''>Read more</button>
+                    <?php the_content(); ?>
                 </p>
             </div>
         </article>

@@ -364,8 +364,8 @@ if (typeof jQuery !== 'undefined') {
 			setCustomBrowserBehavior();
 
             // options-based variables
-            var showLinkHtml = options.showText !== '' ? ' <a class="' + options.showClass + '" href="#">' + options.showText + '</a>' : '';
-            var hideLinkHtml = options.hideText !== '' ? ' <a class="' + options.hideClass + '" href="#">' + options.hideText + '</a>' : '';
+            var showLinkHtml = options.showText !== '' ? ' <a class=" btn-show ' + options.showClass + '" href="#">' + options.showText + '</a>' : '';
+            var hideLinkHtml = options.hideText !== '' ? ' <a class=" btn-hide ' + options.hideClass + '" href="#">' + options.hideText + '</a>' : '';
             var maxHeight = calculateHeight(options.maxLines, options.lineHeight);
             var realMaxHeight = calculateMaxHeight(options.maxLines, options.lineHeight);
 
