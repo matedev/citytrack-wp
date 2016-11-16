@@ -26,10 +26,12 @@ s h2 {
 a,
 a:hover,
 a:visited,
-a:active,
-a:focus {
-    text-decoration: none;
-    text-shadow: none;
+a:focus,
+a:active:focus
+a:active {
+    outline: none !important; 
+    text-decoration: none !important; 
+    text-shadow: none !important; 
 }
 
 p {
@@ -378,6 +380,13 @@ footer {
     transition: all 0.2s ease-in-out 0s;
 }
 
+.btn:visited,
+.btn:focus,
+.btn:active,
+.btn:active:focus {
+    outline: none;
+}
+
 .btn-blue {
     background-color: #115788;
 }
@@ -386,7 +395,9 @@ footer {
 .btn-blue:focus,
 .btn-green:visited,
 .btn-green:focus {
+    border: none;
     color: #fff;
+    outline: none;
 }
 
 .btn-blue:hover {
