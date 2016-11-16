@@ -12,8 +12,6 @@ register_nav_menus(array('primary' => 'Header Menu'));
 
 load_theme_textdomain( 'citytrack', get_template_directory() . '/languages' );
 
-
-
 //-----------------------------------------------
 // Including scripts
 //-----------------------------------------------
@@ -47,6 +45,9 @@ function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 
+//-----------------------------------------------
+// Registering option menus
+//-----------------------------------------------
 if( function_exists('acf_add_options_page') ) {
 
     acf_add_options_page(array(
@@ -76,6 +77,9 @@ if( function_exists('acf_add_options_page') ) {
     
 }
 
+//-----------------------------------------------
+// Custom pagination
+//-----------------------------------------------
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
   if (empty($pagerange)) {
@@ -198,6 +202,19 @@ function change_login_stylesheet() {
 add_action( 'login_enqueue_scripts', 'change_login_stylesheet' );
 
 //-----------------------------------------------
+// Change default WP e-mail and name
+//-----------------------------------------------
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+ 
+function new_mail_from($old) {
+ return 'citytrack@citytrack.fi';
+}
+function new_mail_from_name($old) {
+ return 'CityTrack team';
+}
+
+//-----------------------------------------------
 // Disable the password reset feature
 //-----------------------------------------------
 function disable_reset_pwd() {
@@ -215,6 +232,9 @@ function remove_shake() {
 
 add_action( 'login_head', 'remove_shake' );
 
+//-----------------------------------------------
+// Handle contact us from
+//-----------------------------------------------
 function ct_email_handle() {
 
     $data = array();
@@ -252,6 +272,9 @@ function ct_email_handle() {
 add_action('wp_ajax_ct_email', 'ct_email_handle');
 add_action('wp_ajax_nopriv_ct_email', 'ct_email_handle');
 
+//-----------------------------------------------
+// Handle event registration
+//-----------------------------------------------
 function ct_attend_handle() {
 
     $data = array();
