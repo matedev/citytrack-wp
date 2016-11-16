@@ -842,6 +842,10 @@ footer {
     #img-phone{
         display: none;
     }
+
+    #users .block .col-md-5:nth-child(2){
+        margin-top: 38px;
+    }
 }
 
 
