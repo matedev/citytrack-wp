@@ -395,9 +395,7 @@ footer {
 .btn-blue:focus,
 .btn-green:visited,
 .btn-green:focus {
-    border: none;
     color: #fff;
-    outline: none;
 }
 
 .btn-blue:hover {
@@ -468,6 +466,13 @@ footer {
     font-weight: 300;
     margin-right: 10px;
     text-shadow: none;
+}
+
+.modal .close:active,
+.modal .close:hover,
+.modal .close:focus,
+.modal .close:visited{
+    outline: none;
 }
 
 .modal .modal-dialog {
@@ -558,12 +563,6 @@ footer {
 *
 * Styles applied on partners page.
 */
-
-#partners .splash-block {
-    height: 250px;
-    margin-top: 84px;
-}
-
 #partners #block2 {
     /*background-image: url(../img/bg3.jpg);
     padding-bottom: 43px;*/
@@ -619,8 +618,9 @@ footer {
 
 
 #blog .splash-block,
-#users .splash-block {
-    height: 250px;
+#users .splash-block,
+#partners .splash-block {
+    height: 300px;
     margin-top: 84px;
 }
 
