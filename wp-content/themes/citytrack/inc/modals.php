@@ -54,7 +54,11 @@
             <label for="user-email" class="text-blue">E-mail</label>
             <input type="email" class="form-control no-empty" id="user-email" name="user-email" placeholder="Enter your e-mail">
           </div>
-          
+          <div class="form-group">
+            <input id="event-name" class="hidden" type="text" name="event-name">
+            <input id="event-date" class="hidden" type="text" name="event-date">
+            <input id="event-time" class="hidden" type="text" name="event-time">
+          </div>
           <div class="btnwrap text-right"> 
             <button id="attendform-send" type="submit" class="btn btn-blue sendbtn">Attend</button>
           </div>

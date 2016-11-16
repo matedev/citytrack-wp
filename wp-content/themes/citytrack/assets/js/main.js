@@ -64,8 +64,13 @@
         var mTitle = $(this).data('title');
         var mDesc = $(this).data('desc');
         var mDate = $(this).data('date');
+        var mTime = $(this).data('time');
+        $("#modal-attend #event-name").val(mTitle);
+        $("#modal-attend #event-date").val(mDate);
+        $("#modal-attend #event-time").val(mTime);
         $("#modal-attend .modal-header h1").text("Attend to the " + mTitle);
         $("#event-desc").text(mDesc);
+
     });
 
 

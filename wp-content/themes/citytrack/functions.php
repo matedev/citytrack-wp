@@ -262,7 +262,7 @@ function ct_attend_handle() {
     echo 1;
     $content_to_user = "";
     $content_to_user.= "Dear " . $data['user-name'] . "<br/><br/>";
-    $content_to_user.= "Thank you for attending! We received your registration.<br/><br/>" ;
+    $content_to_user.= "Thank you for registering for the CityTrack " . $data['event-name'] . " at the University of Tampere, on " . $data['event-date'] . " at " . $data['event-time'] ."!.<br/><br/>" ;
     $content_to_user.= "See you soon, <br/>";
     $content_to_user.= "CityTrack team";
 
@@ -270,6 +270,7 @@ function ct_attend_handle() {
 
     $content_to_admin = "";
     $content_to_admin.= "New registration from " . $data['user-name'] . "<br/><br/>";
+    $content_to_admin.= "Event: " . $data['event-name'] . " on " . $data['event-date'] . "<br/>";
     $content_to_admin.= "Name: " . $data['user-name'] . "<br/>";
     $content_to_admin.= "E-mail: " . $data['user-email'] . "<br/>";
 /*

@@ -63,7 +63,7 @@ $splash_url = $src[0];
                     <h2 class="text-blue"><?php the_sub_field('title') ?></h2>
                     <p><?php the_sub_field('description') ?></p>
                     <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="<?php the_sub_field('title') ?>" 
-                    data-date="<?php the_sub_field('date') ?>" data-desc="Please note: meeting starts at <?php the_sub_field('time') ?> 
+                    data-date="<?php the_sub_field('date') ?>" data-time="<?php the_sub_field('time') ?>" data-desc="Please note: meeting starts at <?php the_sub_field('time') ?> 
                     in <?php the_sub_field('place') ?>." href='#modal-attend'>Attend</button>
                     <span class="cd-date"><?php the_sub_field('date') ?></span>
                 </div> <!-- cd-timeline-content -->
