@@ -95,7 +95,7 @@
                             });
                             var marker = new google.maps.Marker({
                               position: uta,
-                              icon: '<?php echo get_template_directory_uri()?>/assets/img/logo.png',
+                              icon: '<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png',
                               title: 'Tampereen yliopisto',
                               map: map
                             });
