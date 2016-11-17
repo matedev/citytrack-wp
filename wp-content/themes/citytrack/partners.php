@@ -123,9 +123,6 @@ $splash_url = $src[0];
                     <li>Information and training</li>
                 </ul>                             
             </div>
-            <div class="col-md-8 col-md-push-2 text-light">
-
-            </div>
         </div>
     </div>
 </div>
