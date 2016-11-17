@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel='shortcut icon' href='<?php echo get_template_directory_uri()?>/favicon.ico' type='image/x-icon'/>
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri()?>/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri()?>/favicon-16x16.png" sizes="16x16">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
