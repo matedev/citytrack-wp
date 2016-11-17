@@ -546,13 +546,13 @@ footer {
     position: relative;
 }
 
-#img-phone {
+#main .splash-block #img-phone {
     margin-top: 115px;
     margin-left: -24px;
     position: absolute;
 }
 
-#img-map-white{
+#main .splash-block #img-map-white{
     position: absolute;
     left: -1070px;
     bottom: 65px;
@@ -572,7 +572,8 @@ footer {
     z-index: -1;
 }
 
-#main #block2 .background-img{
+#main #block2 .background-img,
+#partners #block2 .background-img{
     background-image: url(../img/citymap_color.jpg);
     background-position: center center;
     background-size: cover;
@@ -585,7 +586,8 @@ footer {
     height: 100%;
 }
 
-#main #block2 .layer{
+#main #block2 .layer,
+#partners #block2 .layer{
     background-color: rgba(0, 165, 165, 0.05);
     position: absolute;
     top: 0;
@@ -603,9 +605,19 @@ footer {
 *
 * Styles applied on partners page.
 */
+
+#partners .splash-block #img-map-white{
+    position: absolute;
+    left: -1070px;
+    bottom: 400px;
+    -ms-transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+}
+
 #partners #block2 {
-    /*background-image: url(../img/bg3.jpg);
-    padding-bottom: 43px;*/
+    position: relative;
+    padding-bottom: 28px;
 }
 
 #partners #block2 .separator{

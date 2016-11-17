@@ -9,7 +9,9 @@ $splash_url = $src[0];
 
 ?>
 <div id="partners">
-    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
+    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white"> 
+    </div>
 
     <div class="container separator">
         <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="64px"></div>
@@ -95,11 +97,12 @@ $splash_url = $src[0];
 
     </section> <!-- cd-timeline -->
 
-    <div class="container separator">
-        <h1 class="separator-content">We offer</h1>
-    </div>
 
-    <div id="block2" class="block">
+    <div id="block2">
+        <div class="container separator">
+            <h1 class="separator-content">We offer</h1>
+        </div>
+        <div class="background-img"></div>
         <div class="container text-center">
             <p>
                 A test site for companies and organisations where they can plan, develop and 
@@ -124,6 +127,7 @@ $splash_url = $src[0];
             </div>
 
         </div>
+        <div class="layer">
     </div>
 </div>
 
