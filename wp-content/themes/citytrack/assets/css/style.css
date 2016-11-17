@@ -56,7 +56,7 @@ p {
 }
 
 .text-blue {
-    color: #115788;
+    color: #0077bb;
 }
 
 .text-light {
@@ -167,7 +167,7 @@ p {
 .navbar {
     background: white;
     border: 0;
-    color: #115788;
+    color: #0077bb;
     font-family: 'Open-Sans-600';
 }
 
@@ -182,7 +182,7 @@ p {
 }
 
 .navbar.navbar-default .navbar-nav>li>a {
-    color: #115788;
+    color: #0077bb;
     font-weight: 400;
     text-shadow: none;
 }
@@ -190,7 +190,7 @@ p {
 .navbar .navbar-nav>li:hover,
 .navbar .navbar-nav>li:hover a,
 .navbar .navbar-nav>li a:hover {
-    background: #115788;
+    background: #0077bb;
     color: white;
 }
 
@@ -199,14 +199,14 @@ p {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus{
-    background: #115788;
+    background: #0077bb;
     box-shadow: none;
     color: white;
 }
 
 .navbar-default .navbar-nav > li.current-menu-item,
 .navbar-default .navbar-nav > li.current-menu-item a{
-    background-color: #115788;
+    background-color: #0077bb;
     color: white;
 }
 
@@ -223,18 +223,18 @@ p {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #115788;
+    border-color: #0077bb;
     transition: all 0.2s ease-in-out 0s;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #115788;
+    background-color: #0077bb;
     transition: all 0.2s ease-in-out 0s;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #115788;
+    background-color: #0077bb;
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar,
@@ -261,7 +261,7 @@ p {
 }
 
 .separator .separator-content {
-    color: #115788;
+    color: #0077bb;
     font-size: 38px;
     font-weight: 600;
     margin: 10px auto;
@@ -277,7 +277,7 @@ p {
 .separator .separator-content:before,
 .separator .separator-content:after {
     content: "";
-    border-bottom: 1px solid;
+    border-bottom: 3px dashed;
     display: inline-block;
     margin: 0 .5em 0 -55%;
     vertical-align: middle;
@@ -300,7 +300,7 @@ p {
 */
 
 #footer {
-    background-color: #115788;
+    background-color: #0077bb;
     color: #fff;
     line-height: 1.42857143;
     font-size: 23px;
@@ -327,7 +327,7 @@ p {
 #footer .social-list li a:hover,
 .social-list li a:focus,
 .social-list li a.active {
-    background-color: #115788;
+    background-color: #0077bb;
     border: 2px solid #fff;
     color: #fff;
 }
@@ -335,7 +335,7 @@ p {
 #footer .social-list li a {
     background-color: #fff;
     border: 2px solid #fff;
-    color: #115788;
+    color: #0077bb;
     height: 60px;
     list-style: none;
     margin-right: 5px;
@@ -398,7 +398,7 @@ footer {
 }
 
 .btn-blue {
-    background-color: #115788;
+    background-color: #0077bb;
 }
 
 .btn-blue:visited,
@@ -409,9 +409,9 @@ footer {
 }
 
 .btn-blue:hover {
-    border-color: #115788;
+    border-color: #0077bb;
     background-color: #fff;
-    color: #115788;
+    color: #0077bb;
 }
 
 .btn-green {
@@ -426,17 +426,17 @@ footer {
 
 .btn-white {
     background-color: #fff;
-    color: #115788;
+    color: #0077bb;
 }
 
 .btn-white:hover {
-    background-color: #115788;
+    background-color: #0077bb;
     border-color: #fff;
     color: #fff;
 }
 
 .btn-white:focus {
-    color: #115788;
+    color: #0077bb;
 }
 
 .btn-white:focus:hover {
@@ -583,7 +583,7 @@ footer {
 }
 
 #partners #block1 h2{
-    /*color: #115788;*/
+    /*color: #0077bb;*/
 }
 #partners #block1 p{
    
@@ -636,7 +636,7 @@ footer {
 
 #blog #posts .post-header p {
     background-color: #f5f5f5;
-    color: #115788;
+    color: #0077bb;
     font-size: 14px;
     padding-left: 15px;
 }
@@ -698,7 +698,7 @@ footer {
 }
 
 #users .block h2{
-    /*color: #115788;*/
+    /*color: #0077bb;*/
 }
 
 #users .block p{
@@ -899,11 +899,11 @@ footer {
 
 .custom-pagination a {
   background-color: #ebebeb;
-  color: #115788;
+  color: #0077bb;
 }
 
 .custom-pagination a:hover {
-  background-color: #115788;
+  background-color: #0077bb;
   color: #fff;
 }
 
@@ -918,7 +918,7 @@ footer {
 }
 
 .custom-pagination span.current {
-  background-color: #115788;
+  background-color: #0077bb;
   color: #fff;
 }
 

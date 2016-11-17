@@ -22,7 +22,7 @@ $custom_query = new WP_Query( $args );
     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);"></div>
 
     <div class="container separator">
-        <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="63px"></h1>
+        <h1 class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="63px"></h1>
     </div>
 
     <div id="posts" class="block container">

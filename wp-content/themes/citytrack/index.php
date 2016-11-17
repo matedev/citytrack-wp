@@ -14,7 +14,7 @@ get_header();
     </div>
 
     <div class="container separator">
-        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="64px"></div>
+        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="64px"></div>
     </div>
 
     <div id="block1" class="block">

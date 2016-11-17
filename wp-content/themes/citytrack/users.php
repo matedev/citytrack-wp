@@ -14,7 +14,7 @@ $splash_url = $src[0];
     </div>
 
     <div class="container separator">
-        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" height="64px"></div>
+        <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="64px"></div>
     </div>
 
     <div class="block1 block">
