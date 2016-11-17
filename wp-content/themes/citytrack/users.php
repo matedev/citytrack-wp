@@ -44,11 +44,13 @@ $splash_url = $src[0];
 
     <div id="block2" class="block">
         <div class="background-img"></div>
+
         <div class="container separator">
             <h1 class="separator-content">Pilots of core partners</h1>
         </div>
         <div class="container">
             <div class="row text-center">
+
                 <?php
                     if ( have_posts() ) {
                         while ( have_posts() ) {
@@ -74,17 +76,17 @@ $splash_url = $src[0];
                 </div>
             </div>
             <div class="row">
-            <div class="col-md-10 col-md-push-1">
-                <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
-                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners1.jpg ?>">
-                </div>
-                <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
-                    <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners3.jpg ?>">
-                </div>   
-            </div>                
+                <div class="col-md-10 col-md-push-1">
+                    <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
+                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners1.jpg ?>">
+                    </div>
+                    <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
+                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners3.jpg ?>">
+                    </div>   
+                </div>                
             </div>  
         </div>
-        <div class="layer">
+        <div class="layer"></div>
     </div>
 </div>  
 

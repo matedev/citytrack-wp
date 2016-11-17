@@ -782,6 +782,7 @@ footer {
 }
 
 #users #block2{
+    z-index: -1;
     padding-bottom: 28px;
 }
 
