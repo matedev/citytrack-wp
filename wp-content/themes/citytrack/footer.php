@@ -1,4 +1,5 @@
     <div id="footer">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/track.png" class="img-track">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -42,40 +43,7 @@
                             endif;    
                         ?>
                     </div>
-                </div>
-<?php /*                
-                <div class="col-md-4 text-center">
-                <?php
-                    if ( have_rows('footer_column_2','option') ):
-                        while ( have_rows('footer_column_2','option') ) : the_row(); 
-                            the_sub_field('social_header');
-                ?>
-                            <ul class="social-list">
-                            <?php if(get_sub_field('facebook') ): ?>
-                                <li><a href="<?php the_sub_field('facebook'); ?>" class="fa fa-facebook fa-2x"></a></li>
-                            <?php
-                                endif;    
-                            ?>
-                            <?php if(get_sub_field('youtube') ): ?>
-                                <li><a href="<?php the_sub_field('youtube'); ?>" class="fa fa-youtube fa-2x"></a></li>
-                            <?php
-                                endif;    
-                            ?>
-                            <?php if(get_sub_field('linkedin') ): ?>
-                                <li><a href="<?php the_sub_field('linkedin'); ?>" class="fa fa-linkedin fa-2x"></a></li>
-                            <?php
-                                endif;
-                            ?>                                                       
-                            </ul>
-                <?php
-                        endwhile;
-                    endif;    
-                ?>
-                    <p class="text-center text-regular padding-t50">
-                        <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
-                    </p>
-                </div>
-*/?>                
+                </div>              
                 <div class="col-md-4 text-center">
                     <?php
                         the_field('footer_column_3','option');
@@ -104,6 +72,7 @@
                 </div>
             </div>
         </div>
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/track.png" class="img-track">
     </div>
 
     <footer class="text-center">

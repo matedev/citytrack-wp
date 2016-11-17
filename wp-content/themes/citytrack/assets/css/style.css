@@ -305,6 +305,8 @@ p {
     line-height: 1.42857143;
     font-size: 23px;
     padding: 0px 0px 26px 0px;
+    position: relative;
+    overflow: hidden;
 }
 
 #footer a,
@@ -373,6 +375,19 @@ p {
 footer {
     font-size: 14px;
     margin: 20px 0px 20px 0px;
+}
+
+#footer .img-track{
+    position: absolute;
+}
+
+#footer .img-track:first-child{
+    top: -62px;
+    left: -977px;
+}
+#footer .img-track:last-child{
+    bottom: -329px;
+    right: -730px;
 }
 
 /**
@@ -547,6 +562,7 @@ footer {
 
 .splash-block{
     position: relative;
+    overflow: hidden;
 }
 
 #main .splash-block #img-phone {
@@ -944,6 +960,15 @@ footer {
 
     #users .block .col-md-5:nth-child(2){
         margin-top: 38px;
+    }
+}
+
+@media (max-width: 1500px){
+    #footer .img-track:first-child{
+        display: none;
+    }
+    #footer .img-track:last-child{
+        opacity: 0.2;
     }
 }
 
