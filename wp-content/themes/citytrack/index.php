@@ -43,17 +43,20 @@ get_header();
     </div>
 
     <div id="block2" class="block">
+        <div class="background-img"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 padding-50 text-center">
-                    <?php the_field('block_2'); ?>
-                </div>
-                <div class="col-md-6 col-sm-12 padding-t60 padding-b60">
-                    <div class="embed-video embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.youtube.com/embed/HGRl9iePLFc" allowfullscreen></iframe>
+                <div class="row">
+                    <div class="col-md-6 padding-50 text-center">
+                        <?php the_field('block_2'); ?>
+                    </div>
+                    <div class="col-md-6 col-sm-12 padding-t60 padding-b60">
+                        <div class="embed-video embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/HGRl9iePLFc" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
+        <div class="layer">
         </div>
     </div>  
 
