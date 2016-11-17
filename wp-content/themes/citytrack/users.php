@@ -49,20 +49,14 @@ $splash_url = $src[0];
         </div>
         <div class="container">
             <div class="row text-center">
-                <p>
-                    Together with core partners Here, Beemray, Finnpark, Kesko, Tampere Hall and the S Group 
-                    we pilot new services related to <strong><span style="color: #115788;">urban mobility</span></strong> and 
-                    <strong><span style="color: #115788;">cross-channel customer experiences</span></strong>
-                    In Tampere city centre around the railway station 
-                </p>
-                <?php /*
+                <?php
                     if ( have_posts() ) {
                         while ( have_posts() ) {
                             the_post(); ?>         
                             <?php the_content(); ?>
                         <?php }
                     }
-               */ ?>
+                ?>
             </div>
         </div>
         <div class="container partner-images-container">
