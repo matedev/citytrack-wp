@@ -11,6 +11,7 @@ $splash_url = $src[0];
 
 <div id="users">
     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);">
+        <img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white">
     </div>
 
     <div class="container separator">
@@ -41,11 +42,11 @@ $splash_url = $src[0];
         </div>         
     </div>
 
-    <div class="container separator">
-        <h1 class="separator-content">Pilots of core partners</h1>
-    </div>
-
-    <div class="block2 block">
+    <div id="block2" class="block">
+        <div class="background-img"></div>
+        <div class="container separator">
+            <h1 class="separator-content">Pilots of core partners</h1>
+        </div>
         <div class="container">
             <div class="row text-center">
                 <p>
@@ -89,6 +90,7 @@ $splash_url = $src[0];
             </div>                
             </div>  
         </div>
+        <div class="layer">
     </div>
 </div>  
 

@@ -543,6 +543,9 @@ footer {
     background-image: url(../img/main_photo.jpg);
     height: 600px;
     margin-top: 84px;
+}
+
+.splash-block{
     position: relative;
 }
 
@@ -553,14 +556,16 @@ footer {
 }
 
 #main .splash-block #img-map-white{
-    position: absolute;
-    left: -1070px;
     bottom: 65px;
+    left: -1070px;
+}
+
+#img-map-white{
+    position: absolute;
     -ms-transform: rotate(7deg);
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
 }
-
 #main .block p{
     font-family: "Open-Sans-light";
 }
@@ -572,8 +577,7 @@ footer {
     z-index: -1;
 }
 
-#main #block2 .background-img,
-#partners #block2 .background-img{
+#block2 .background-img{
     background-image: url(../img/citymap_color.jpg);
     background-position: center center;
     background-size: cover;
@@ -586,8 +590,7 @@ footer {
     height: 100%;
 }
 
-#main #block2 .layer,
-#partners #block2 .layer{
+#block2 .layer{
     background-color: rgba(0, 165, 165, 0.05);
     position: absolute;
     top: 0;
@@ -595,6 +598,7 @@ footer {
     width: 100%;
     height: 100%;
 }
+
 .embed-video {
     border: 20px solid #0077bb;
 }
@@ -607,12 +611,9 @@ footer {
 */
 
 #partners .splash-block #img-map-white{
-    position: absolute;
-    left: -1070px;
-    bottom: 400px;
-    -ms-transform: rotate(7deg);
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    top: -160px;
+    height: 500px;
+    left: -670px;
 }
 
 #partners #block2 {
@@ -672,6 +673,13 @@ footer {
     margin-top: 84px;
 }
 
+#blog .splash-block #img-map-white{
+    top: -160px;
+    height: 500px;
+    left: -670px;
+}
+
+
 #blog .separator {
     margin-bottom: 50px;
 }
@@ -721,6 +729,15 @@ footer {
 * Styles applied on users page.
 */
 
+#users .splash-block{
+    position: relative;
+}
+#users .splash-block #img-map-white{
+    top: -160px;
+    height: 500px;
+    left: -670px;
+}
+
 #users .users-description {
     line-height: normal;
     padding: 15px 15px 0px 15px;
@@ -739,8 +756,12 @@ footer {
     padding-top: 7px;
 }
 
-#users .block h2{
-    /*color: #0077bb;*/
+#users #block2{
+    padding-bottom: 28px;
+}
+
+#users .block {
+    position: relative;
 }
 
 #users .block p{
