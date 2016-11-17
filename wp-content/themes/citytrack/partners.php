@@ -103,6 +103,7 @@ $splash_url = $src[0];
             <h1 class="separator-content">We offer</h1>
         </div>
         <div class="background-img"></div>
+        <div class="layer"></div>
         <div class="container text-center">
             <p>
                 A test site for companies and organisations where they can plan, develop and 
@@ -116,18 +117,16 @@ $splash_url = $src[0];
                 </ul>
             </div>
             <div class="col-md-6 text-left text-light">
-            <ul>
-                <li>Pre-made indoor maps e.g. University of Tampere</li>
-                <li>Access to Here Location Suite</li>
-                <li>Information and training</li>
-            </ul>                             
+                <ul>
+                    <li>Pre-made indoor maps e.g. University of Tampere</li>
+                    <li>Access to Here Location Suite</li>
+                    <li>Information and training</li>
+                </ul>                             
             </div>
             <div class="col-md-8 col-md-push-2 text-light">
 
             </div>
-
         </div>
-        <div class="layer">
     </div>
 </div>
 

@@ -279,14 +279,23 @@ p {
     content: "";
     border-bottom: 3px dashed;
     display: inline-block;
-    margin: 0 .5em 0 -55%;
     vertical-align: middle;
     width: 50%;
 }
-
+.separator .separator-content:before {
+   margin: 0 .5em 0 -55%;
+}
 .separator .separator-content:after {
     margin: 0 -55% 0 .5em;
 }
+/*.separator h1.separator-content:before {
+   margin: 0 2.5em 0 -55%;
+}
+.separator h1.separator-content:after {
+    margin: 0 -55% 0 2.5em;
+}*/
+
+
 
 .separator.partner-separator {
     margin-bottom: 0;
