@@ -1,3 +1,15 @@
+/*
+Theme Name: CityTrack theme
+Theme URI: https://github.com/matedev/citytrack-wp
+Author: UTA
+Author URI: uta.fi
+Description: CityTrack is a responsive WordPress layout for CityTrack.
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: citytrack
+*/
+
 /**
 * Common global styles
 *
@@ -160,8 +172,8 @@ p {
 }
 
 .navbar-brand {
+    margin-top: -22px;      
     float: left;
-    font-size: 30px;
 }
 
 .navbar-right {
@@ -169,8 +181,6 @@ p {
     text-transform: uppercase;
 }
 
-.navbar-header .navbar-brand,
-.navbar-header .navbar-brand:hover,
 .navbar.navbar-default .navbar-nav>li>a {
     color: #115788;
     font-weight: 400;
@@ -821,6 +831,10 @@ footer {
     }
     .navbar-brand {
         padding: 8px 15px;
+        margin-top: -7px;
+    }
+    .navbar-brand img{
+        height: 65px;       
     }
 
     #blog .splash-block, 

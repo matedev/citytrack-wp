@@ -24,8 +24,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-                    <span><img id="logo" src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" alt="" height="35px"></span>
-                    <span>CityTrack</span>
+                    <span><img id="logo" src="<?php echo get_template_directory_uri()?>/assets/img/logo_border.png" alt="" height="98px"></span>
                 </a>
             </div>
             <div class="navbar-collapse collapse navbar-right">
