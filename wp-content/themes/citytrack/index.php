@@ -9,7 +9,7 @@ get_header();
 <div id="main">
     <div class="splash-block">
         <div class="container">
-            <img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white">        
+            <!--img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white"-->
             <img src="<?php echo get_template_directory_uri()?>/assets/img/phone.png" id="img-phone">
         </div>  
     </div>
@@ -50,8 +50,8 @@ get_header();
                         <?php the_field('block_2'); ?>
                     </div>
                     <div class="col-md-6 col-sm-12 padding-t60 padding-b60">
-                        <div class="embed-video embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.youtube.com/embed/HGRl9iePLFc" allowfullscreen></iframe>
+                        <div class="youtube-player embed-video embed-responsive" data-id="VIDEO_ID">
+                            <img src="<?php echo get_template_directory_uri()?>/assets/img/video.jpg">
                         </div>
                     </div>
                 </div>

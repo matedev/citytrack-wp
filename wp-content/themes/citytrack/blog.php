@@ -20,7 +20,7 @@ $custom_query = new WP_Query( $args );
 <div id="blog">
 
     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);">
-        <img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white">
+        <!--img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white"-->
     </div>
 
     <div class="container separator">
