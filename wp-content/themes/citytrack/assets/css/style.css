@@ -478,16 +478,18 @@ footer {
 * Styles applied on modals.
 */
 
-
 .modal-body {
-    background-image: url("../img/bg5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     padding: 50px 70px;
 }
-
+.modal-content{
+    background: url("../img/modal_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    box-shadow: none;
+}
 
 .modal-body img {
     width: 100%;
@@ -525,9 +527,9 @@ footer {
 }
 
 .modal-header {
-    background-image: url("../img/bg4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgba(22, 75, 117, 0.75);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .modal-header h1{
