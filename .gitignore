@@ -3,3 +3,7 @@
 wp-content/uploads/*
 
 .htaccess
+build/*
+node_modules/*
+gulpfile.js
+package.json
