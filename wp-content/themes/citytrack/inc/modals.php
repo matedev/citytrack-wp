@@ -52,7 +52,8 @@
 
            <div class="form-group">
             <label for="user-email" class="text-blue">E-mail</label>
-            <input type="email" class="form-control no-empty" id="user-email" name="user-email" placeholder="Enter your e-mail">
+            <input type="email" class="form-control no-empty" id="user-email" name="user-email" placeholder="Enter your e-mail"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
           </div>
           <div class="form-group">
             <input id="event-name" class="hidden" type="text" name="event-name">

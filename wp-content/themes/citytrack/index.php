@@ -30,15 +30,7 @@ get_header();
 
     <div class="block">
         <div class="container text-center text-light">
-            <p>
-            A central aim of the CityTrack research project is to translate location 
-            information to added value for consumers who move about in the city centre. 
-            </p>
-            <p>
-            New services will be introduced in the test site at and around the Tampere 
-            railway station in order to help people find suitable connecting train routes, 
-            restaurants and shops. 
-            </p>
+            <?php the_field('block_2'); ?>
         </div>
     </div>
 
@@ -47,7 +39,7 @@ get_header();
         <div class="container">
                 <div class="row">
                     <div class="col-md-6 padding-50 text-center">
-                        <?php the_field('block_2'); ?>
+                        <?php the_field('block_3'); ?>
                     </div>
                     <div class="col-md-6 col-sm-12 padding-t60 padding-b60">
                         <div class="youtube-player embed-video embed-responsive" data-id="VIDEO_ID">
@@ -64,7 +56,7 @@ get_header();
          <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <?php the_field('block_3'); ?>
+                    <?php the_field('block_4'); ?>
                 </div>
             </div>
         </div>

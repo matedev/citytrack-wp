@@ -105,24 +105,7 @@ $splash_url = $src[0];
         <div class="background-img"></div>
         <div class="layer"></div>
         <div class="container text-center">
-            <p>
-                A test site for companies and organisations where they can plan, develop and 
-                test location-based services in a densely populated and service intensive urban environment
-            </p>
-            <br/>
-            <div class="col-md-6 text-left text-light">
-                <ul>
-                    <li>Open test site for any organization to trial location based services seamlessly indoors and outdoors</li>
-                    <li>Test facilities with location beacons and test apps available</li>
-                </ul>
-            </div>
-            <div class="col-md-6 text-left text-light">
-                <ul>
-                    <li>Pre-made indoor maps e.g. University of Tampere</li>
-                    <li>Access to Here Location Suite</li>
-                    <li>Information and training</li>
-                </ul>                             
-            </div>
+            <?php the_field('block_1'); ?>
         </div>
     </div>
 </div>

@@ -41,7 +41,7 @@
 
         $('#modal-contact').on('hidden.bs.modal', function () {
             $("#modal-contact .no-empty").removeClass("warning");
-        })
+        });
 
         $("#attendform-send").bind( "click", function(event) {
             event.preventDefault();
@@ -59,7 +59,7 @@
 
         $('#modal-attend').on('hidden.bs.modal', function () {
             $("#modal-attend .no-empty").removeClass("warning");
-        })
+        });
     });
 
     $(document).on("click", ".btn-attend", function () {
@@ -78,10 +78,18 @@
 
     function validateForm(id){
         var ok = true;
+        $('#' + id + ' .no-empty').removeClass("warning");
         $('#' + id + ' .no-empty').each(function(index,element){
             if( !$(this).val() ) {
                   $(this).addClass('warning');
                   ok = false;
+            }
+        });
+        $('#' + id + ' input[type=email]').each(function(index,element) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(!re.test($(this).val())){
+                $(this).addClass('warning');
+                ok = false;
             }
         })
         return ok;
