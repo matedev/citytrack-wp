@@ -11,7 +11,7 @@
                     <strong>Interested? Got questions?</strong> <br/>
                     Send email to <strong><a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a></strong>.
                      <p class="text-regular">
-                        <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'>Contact Us</button>
+                        <button type="button" class="btn btn-white" data-toggle="modal" href='#modal-contact'><?php echo __("Contact Us", "citytrack"); ?></button>
                     </p>                          
 <?php /*                    <div class="col-sm-4 same-height">
                         <h2 class=" padding-t10 text-light">Follow Us</h2>

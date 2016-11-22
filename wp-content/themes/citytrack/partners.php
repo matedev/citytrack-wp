@@ -6,7 +6,6 @@ get_header();
 
 $src = wp_get_attachment_image_src( get_post_thumbnail_id(11), 'thumbnail_size' );
 $splash_url = $src[0];
-
 ?>
 <div id="partners">
     <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);">
@@ -28,14 +27,14 @@ $splash_url = $src[0];
                 }
             ?>
             <p class="padding-t50">
-                <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'>Contact Us</button>
+                <button type="button" class="btn btn-blue" data-toggle="modal" href='#modal-contact'><?php echo __("Contact Us", "citytrack"); ?></button>
             </p>
         </div>
     </div>
     
 
     <div class="container separator">
-        <h1 class="separator-content">Events</h1>
+        <h1 class="separator-content"><?php echo __("Events", "citytrack"); ?></h1>
     </div>
     
     <section id="cd-timeline" class="cd-container">
@@ -66,7 +65,7 @@ $splash_url = $src[0];
                     <p><?php the_sub_field('description') ?></p>
                     <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="<?php the_sub_field('title') ?>" 
                     data-date="<?php the_sub_field('date') ?>" data-time="<?php the_sub_field('time') ?>" data-desc="Please note: meeting starts at <?php the_sub_field('time') ?> 
-                    in <?php the_sub_field('place') ?>." href='#modal-attend'>Attend</button>
+                    in <?php the_sub_field('place') ?>." href='#modal-attend'><?php echo __("Attend", "citytrack"); ?></button>
                     <span class="cd-date"><?php the_sub_field('date') ?></span>
                 </div> <!-- cd-timeline-content -->
             </div> <!-- cd-timeline-block -->                       
@@ -100,7 +99,7 @@ $splash_url = $src[0];
 
     <div id="block2">
         <div class="container separator">
-            <h1 class="separator-content">We offer</h1>
+            <h1 class="separator-content"><?php echo __("We offer", "citytrack"); ?></h1>
         </div>
         <div class="background-img"></div>
         <div class="layer"></div>

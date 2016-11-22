@@ -25,7 +25,7 @@ get_header();
     </div>
 
     <div class="container separator">
-            <h1 class="separator-content">Targets</h1>
+            <h1 class="separator-content"><?php echo __("Targets", "citytrack"); ?></h1>
     </div>
 
     <div class="block">

@@ -46,7 +46,7 @@ $splash_url = $src[0];
         <div class="background-img"></div>
 
         <div class="container separator">
-            <h1 class="separator-content">Pilots of core partners</h1>
+            <h1 class="separator-content"><?php echo __("Pilots of Core partners", "citytrack"); ?></h1>
         </div>
         <div class="container">
             <div class="row text-center">

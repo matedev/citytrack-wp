@@ -102,16 +102,8 @@
         }, function (response) {
             if (response == 'error'){
                 $('#error-modal').modal('show');
-                $('#error-modal .modal-body').empty();
-                $('#error-modal .modal-header').empty();
-                $('#error-modal .modal-header').append('<h1>Sorry</h1>!');
-                $('#error-modal .modal-body').append('Something went wrong!<br/><br/>');
             }else{  
-                $('#error-modal').modal('show');
-                $('#error-modal .modal-body').empty();
-                $('#error-modal .modal-header').empty();
-                $('#error-modal .modal-header').append('<h1>Thank you for your interest!</h1>');
-                $('#error-modal .modal-body').append('We will contact you soon');
+                $('#thanks-modal').modal('show');
             }
             $("#modal-contact #contactform").trigger('reset');
         });
@@ -124,16 +116,8 @@
         }, function (response) {
             if (response == 'error'){
                 $('#error-modal').modal('show');
-                $('#error-modal .modal-body').empty();
-                $('#error-modal .modal-header').empty();
-                $('#error-modal .modal-header').append('<h1>Sorry</h1>!');
-                $('#error-modal .modal-body').append('Something went wrong!<br/><br/>');
             }else{  
-                $('#error-modal').modal('show');
-                $('#error-modal .modal-body').empty();
-                $('#error-modal .modal-header').empty();
-                $('#error-modal .modal-header').append('<h1>Thank you for attending!</h1>');
-                $('#error-modal .modal-body').append('We received your registration');
+                $('#thanks-modal').modal('show');
             }
             $("#modal-attend #attendform").trigger('reset');
         });        
