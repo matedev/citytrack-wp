@@ -25,7 +25,9 @@
             <label for="message" class="text-blue"><?php echo __("Message", "citytrack"); ?></label>
             <textarea id="message" name="message" class="form-control no-empty" rows="3"></textarea>
           </div>
-
+          <div class="form-group">
+            <input id="locale" class="hidden" type="text" name="locale" value="<?php echo get_locale(); ?>">
+          </div>
           <div class="btnwrap text-right"> 
             <button id="contantform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Send", "citytrack"); ?></button>
           </div>
@@ -59,6 +61,7 @@
             <input id="event-name" class="hidden" type="text" name="event-name">
             <input id="event-date" class="hidden" type="text" name="event-date">
             <input id="event-time" class="hidden" type="text" name="event-time">
+            <input id="locale" class="hidden" type="text" name="locale" value="<?php echo get_locale(); ?>">
           </div>
           <div class="btnwrap text-right"> 
             <button id="attendform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Attend", "citytrack"); ?></button>

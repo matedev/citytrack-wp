@@ -243,15 +243,21 @@ function ct_email_handle() {
         $data[$i['name']] = $i['value'];
     }
 
-    echo 1;
-    $content_to_user = "";
-    $content_to_user.= "Dear " . $data['user-name'] . "<br/><br/>";
-    $content_to_user.= "Thank you for your interest! We received your message and will contact you soon.<br/><br/>" ;
-    $content_to_user.= "Your message: " . $data['message'] . ".<br/><br/>";
-    $content_to_user.= "Best regards, <br/>";
-    $content_to_user.= "CityTrack team";
+    if($data['locale'] = "fi_FI"){
 
-    $subject_to_user = "[CityTrack automatic reply] " . $data['subject'];
+    }else{
+
+    }
+    echo 1;
+
+    $content_to_user = "";
+    $content_to_user.= __("Dear", "citytrack") . " " . $data['user-name'] . ",<br/><br/>";
+    $content_to_user.= __("Thank you for your interest! We received your message and will contact you soon.", "citytrack") . "<br/><br/>" ;
+    $content_to_user.= __("Your message", "citytrack") . ": " . $data['message'] . ".<br/><br/>";
+    $content_to_user.= __("Best regards", "citytrack") .", <br/>";
+    $content_to_user.= __("CityTrack team", "citytrack");
+
+    $subject_to_user = "[" . __("CityTrack automatic reply", "citytrack") . "] " . $data['subject'];
 
     $content_to_admin = "";
     $content_to_admin.= "New message from " . $data['user-name'] . "<br/><br/>";
@@ -285,12 +291,12 @@ function ct_attend_handle() {
 
     echo 1;
     $content_to_user = "";
-    $content_to_user.= "Dear " . $data['user-name'] . "<br/><br/>";
-    $content_to_user.= "Thank you for registering for the CityTrack " . $data['event-name'] . " at the University of Tampere, on " . $data['event-date'] . " at " . $data['event-time'] ."!.<br/><br/>" ;
-    $content_to_user.= "See you soon, <br/>";
-    $content_to_user.= "CityTrack team";
+    $content_to_user.= __("Dear", "citytrack") . " " . $data['user-name'] . ",<br/><br/>";
+    $content_to_user.= __("Thank you for registering for the CityTrack", "citytrack") . " " . $data['event-name'] . " " . __("at the University of Tampere, on", "citytrack") . " " . $data['event-date'] . " " . __("at", "citytrack") . " " . $data['event-time'] .".<br/><br/>" ;
+    $content_to_user.= __("See you soon", "citytrack") . ", <br/>";
+    $content_to_user.= __("CityTrack team", "citytrack");
 
-    $subject_to_user = "[CityTrack automatic reply] Successfull registration";
+    $subject_to_user = "[" . __("CityTrack automatic reply", "citytrack") . "] " . __("Successfull registration", "citytrack");
 
     $content_to_admin = "";
     $content_to_admin.= "New registration from " . $data['user-name'] . "<br/><br/>";
