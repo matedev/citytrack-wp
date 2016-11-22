@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 same-height">
-                    <div class="col-md-12 no-padding">
+                    <div>
                         <?php
                             the_field('footer_column_1','option');
                         ?>                    
