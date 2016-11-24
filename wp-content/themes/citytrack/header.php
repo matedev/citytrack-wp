@@ -5,7 +5,6 @@
 	<title>
         <?php 
             wp_title( '·', TRUE, 'right' );
-            bloginfo( 'name' );
     	?>    
     </title>
 	<?php wp_head(); ?>
@@ -16,6 +15,7 @@
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri()?>/favicon-16x16.png" sizes="16x16">
 </head>
 <body>
+	<?php include_once("analyticstracking.php") ?>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
