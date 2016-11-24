@@ -188,7 +188,7 @@ function change_login_logo_url() {
 add_filter( 'login_headerurl', 'change_login_logo_url' );
 
 function change_login_logo_url_title() {
-    return "Foxpost Login Theme";
+    return "Login Theme";
 }
 
 add_filter( 'login_headertitle', 'change_login_logo_url_title' );
