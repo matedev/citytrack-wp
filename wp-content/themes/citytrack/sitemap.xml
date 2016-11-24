@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+			http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+	xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+<url>
+	<loc>http://www.citytrack.fi/</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+	<video:video>
+		<video:content_loc>
+		https://www.youtube.com/watch?v=HGRl9iePLFc
+		</video:content_loc>
+		<video:player_loc allow_embed="yes" autoplay="ap=1">
+		https://www.youtube.com/embed/HGRl9iePLFc
+		</video:player_loc>
+		<video:thumbnail_loc>
+		http://citytrack.fi/wp-content/themes/citytrack/assets/img/video.jpg
+		</video:thumbnail_loc>
+		<video:title>CityTrack application</video:title>  
+		<video:description>
+			CityTrack application enables smooth indoor and outdoor positioning.
+		</video:description>
+	</video:video>	
+</url>
+<url>
+	<loc>http://www.citytrack.fi/pilots</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners2.jpg</image:loc>
+       <image:caption>Hotel Torni</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners4.jpg</image:loc>
+       <image:caption>Finnpark</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners5.jpg</image:loc>
+       <image:caption>Tampere Railway Station</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners1.jpg</image:loc>
+       <image:caption>Tampere talo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners3.jpg</image:loc>
+       <image:caption>K Market</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+</url>
+<url>
+	<loc>http://www.citytrack.fi/test-site</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+</url>
+
+<url>
+	<loc>http://citytrack.fi/</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+	<video:video>
+		<video:content_loc>
+		https://www.youtube.com/watch?v=HGRl9iePLFc
+		</video:content_loc>
+		<video:player_loc allow_embed="yes" autoplay="ap=1">
+		https://www.youtube.com/embed/HGRl9iePLFc
+		</video:player_loc>
+		<video:thumbnail_loc>
+		http://citytrack.fi/wp-content/themes/citytrack/assets/img/video.jpg
+		</video:thumbnail_loc>
+		<video:title>CityTrack application</video:title>  
+		<video:description>
+			CityTrack application enables smooth indoor and outdoor positioning.
+		</video:description>
+	</video:video>	
+</url>
+<url>
+	<loc>http://citytrack.fi/pilots</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners2.jpg</image:loc>
+       <image:caption>Hotel Torni</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners4.jpg</image:loc>
+       <image:caption>Finnpark</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners5.jpg</image:loc>
+       <image:caption>Tampere Railway Station</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners1.jpg</image:loc>
+       <image:caption>Tampere talo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners3.jpg</image:loc>
+       <image:caption>K Market</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+</url>
+<url>
+	<loc>http://citytrack.fi/test-site</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+</url>
+
+<url>
+	<loc>https://citytrack.fi/</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+	<video:video>
+		<video:content_loc>
+		https://www.youtube.com/watch?v=HGRl9iePLFc
+		</video:content_loc>
+		<video:player_loc allow_embed="yes" autoplay="ap=1">
+		https://www.youtube.com/embed/HGRl9iePLFc
+		</video:player_loc>
+		<video:thumbnail_loc>
+		http://citytrack.fi/wp-content/themes/citytrack/assets/img/video.jpg
+		</video:thumbnail_loc>
+		<video:title>CityTrack application</video:title>  
+		<video:description>
+			CityTrack application enables smooth indoor and outdoor positioning.
+		</video:description>
+	</video:video>	
+</url>
+<url>
+	<loc>https://citytrack.fi/pilots</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners2.jpg</image:loc>
+       <image:caption>Hotel Torni</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners4.jpg</image:loc>
+       <image:caption>Finnpark</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners5.jpg</image:loc>
+       <image:caption>Tampere Railway Station</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners1.jpg</image:loc>
+       <image:caption>Tampere talo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/themes/citytrack/assets/img/partners3.jpg</image:loc>
+       <image:caption>K Market</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+</url>
+<url>
+	<loc>https://citytrack.fi/test-site</loc>
+	<changefreq>weekly</changefreq>
+	<priority>1.00</priority>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-uta2.png</image:loc>
+       <image:caption>University of Tampere logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-finnpark.png</image:loc>
+       <image:caption>Finnpark logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tampere.png</image:loc>
+       <image:caption>City of Tampere logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-talo.png</image:loc>
+       <image:caption>Tampere talo logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-sryhma.png</image:loc>
+       <image:caption>S ryhma logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-beemray.png</image:loc>
+       <image:caption>Beemray logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-tredea.png</image:loc>
+       <image:caption>Tredea logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-here.png</image:loc>
+       <image:caption>Here logo</image:caption>
+    </image:image>	
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-kesko.png</image:loc>
+       <image:caption>Kesko logo</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://citytrack.fi/wp-content/uploads/2016/11/logo-allbright.png</image:loc>
+       <image:caption>Tampere All Bright logo</image:caption>
+    </image:image>
+</url>
+</urlset>
