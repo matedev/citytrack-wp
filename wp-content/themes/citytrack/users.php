@@ -4,13 +4,13 @@
 
 get_header();
 
-$src = wp_get_attachment_image_src( get_post_thumbnail_id(4), 'thumbnail_size' );
-$splash_url = $src[0];
+/*$src = wp_get_attachment_image_src( get_post_thumbnail_id(4), 'thumbnail_size' );
+$splash_url = $src[0];*/
 
 ?>
 
 <div id="users">
-    <div class="splash-block" style="background-image: url(<?php echo $splash_url; ?>);">
+    <div class="splash-block">
         <!--img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white"-->
     </div>
 

@@ -7590,6 +7590,9 @@ footer {
 *
 * Styles applied on partners page.
 */
+#partners .splash-block{
+    background-image: url(../img/main_photo3.jpg);
+}
 
 #partners .splash-block #img-map-white{
     top: -160px;
@@ -7711,8 +7714,10 @@ footer {
 */
 
 #users .splash-block{
+    background-image: url(../img/main_photo2.jpg);
     position: relative;
 }
+
 #users .splash-block #img-map-white{
     top: -160px;
     height: 500px;
@@ -7771,6 +7776,20 @@ footer {
 @media (max-width: 350px){
     #map {
         width: 238px;
+    }
+    #main .splash-block{
+        background-image: url(../img/main_photo_small.png);
+        background-position: center center !important;
+        height: 253px;
+
+    }
+    #users .splash-block{
+        background-image: url(../img/main_photo2_small.jpg);
+        height: 168px;
+    }
+    #partners .splash-block{
+        background-image: url(../img/main_photo3_small.jpg);
+        height: 168px;
     }
 }
 
@@ -7916,6 +7935,9 @@ footer {
     }
     #blog #posts .img-container img {
         margin: 0 auto;
+    }
+    #main .splash-block{
+        background-position-x: -700px;
     }
     #img-phone{
         display: none;
