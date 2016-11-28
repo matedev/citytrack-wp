@@ -270,7 +270,7 @@ function ct_email_handle() {
 
     
     //mail
-    wp_mail(get_option('admin_email'), $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail("sanna.rytovuori@uta.fi", $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
     wp_mail($data['user-email'], $subject_to_user, $content_to_user, array('Content-Type: text/html; charset=UTF-8'));
 
     wp_die();
@@ -311,7 +311,7 @@ function ct_attend_handle() {
 
     
     //mail
-    wp_mail(get_option('admin_email'), $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail("sanna.rytovuori@uta.fi", $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
     wp_mail($data['user-email'], $subject_to_user, $content_to_user, array('Content-Type: text/html; charset=UTF-8'));
 
     wp_die();
