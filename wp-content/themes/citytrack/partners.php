@@ -42,8 +42,9 @@ get_header();
                 while ( have_rows('events','option') ) : 
                     the_row();
         ?> 
-            <div class="cd-timeline-block cd-timeline-block-disabled">
+            <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture"> 
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="90px">
                 <?php 
                     switch (get_sub_field('type')) {
                         case 'Information':
@@ -80,6 +81,7 @@ get_header();
         ?> 
             <div class="cd-timeline-block cd-timeline-block-disabled">
                 <div class="cd-timeline-img cd-picture"> 
+                    <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="90px">
                     <i class="fa fa-forward text-white text-center fa-rotate-90" aria-hidden="true"></i>
                 </div> <!-- cd-timeline-img -->
                 <div class="cd-timeline-content">
