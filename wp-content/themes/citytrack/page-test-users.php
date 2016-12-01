@@ -1,5 +1,5 @@
 <?php
-/*Template Name: users*/
+/*Template Name: test-users*/
 
 
 get_header();

@@ -1,5 +1,5 @@
 <?php
-/*Template Name: partners*/
+/*Template Name: test-site*/
 
 
 get_header();
