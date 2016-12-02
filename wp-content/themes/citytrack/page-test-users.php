@@ -9,7 +9,7 @@ $splash_url = $src[0];*/
 
 ?>
 
-<div id="users">
+<div id="test-users">
     <div class="splash-block">
         <!--img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white"-->
     </div>
@@ -20,7 +20,33 @@ $splash_url = $src[0];*/
 
     <div class="block1 block">
         <div class="container">
-            <div class="row">
+            <div class="row text-center text-light">
+                <?php
+                    if ( have_posts() ) {
+                        while ( have_posts() ) {
+                            the_post(); ?>         
+                            <?php the_content(); ?>
+                        <?php }
+                    }
+                ?>
+            </div>
+        </div>         
+    </div>
+
+    <div id="block2" class="block">
+        <div class="background-img"></div>
+
+        <div class="container separator">
+            <h1 class="separator-content"><?php echo __("Lotteries for test users!", "citytrack"); ?></h1>
+        </div>
+        <div class="container text-light">
+            <?php the_field('lotteries'); ?>
+        </div>
+        <div class="layer"></div>
+    </div>
+
+    <div id="block3">
+        <div class="container">
                 <?php
                     if ( have_rows('scrollable_container', 4) ):
                         while ( have_rows('scrollable_container', 4) ) : the_row(); 
@@ -38,55 +64,15 @@ $splash_url = $src[0];*/
                         endwhile;
                     endif
                 ?>
-            </div>
-        </div>         
+        </div>      
     </div>
-
-    <div id="block2" class="block">
-        <div class="background-img"></div>
-
+    <div id="block4">
         <div class="container separator">
-            <h1 class="separator-content"><?php echo __("Pilots of Core partners", "citytrack"); ?></h1>
-        </div>
-        <div class="container">
-            <div class="row text-center">
-
-                <?php
-                    if ( have_posts() ) {
-                        while ( have_posts() ) {
-                            the_post(); ?>         
-                            <?php the_content(); ?>
-                        <?php }
-                    }
-                ?>
-            </div>
-        </div>
-        <div class="container partner-images-container">
-            <div class="row">
-                <div class="col-md-10 col-md-push-1">
-                    <div class="col-sm-4 col-xs-12 img-container">
-                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners2.jpg ?>">
-                    </div>
-                    <div class="col-sm-4 col-xs-12 img-container">
-                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners4.jpg ?>">
-                    </div>
-                    <div class="col-sm-4 col-xs-12 img-container">
-                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners5.jpg ?>">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-10 col-md-push-1">
-                    <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
-                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners1.jpg ?>">
-                    </div>
-                    <div class="col-sm-4 col-sm-push-2 col-xs-12 img-container">
-                        <img class="img-class" src="<?php echo get_template_directory_uri()?>/assets/img/partners3.jpg ?>">
-                    </div>   
-                </div>                
-            </div>  
-        </div>
-        <div class="layer"></div>
+            <h1 class="separator-content"><?php echo __("What to do?", "citytrack"); ?></h1>
+            <P class="text-center text-light">
+                <?php the_field('what_to_do'); ?>
+            </P>
+        </div>        
     </div>
 </div>  
 
