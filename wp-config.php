@@ -38,7 +38,7 @@ define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
 /** Force SSL logins */
-define('FORCE_SSL_ADMIN', true);
+//define('FORCE_SSL_ADMIN', true);
 
 /**#@+
  * Authentication Unique Keys and Salts.
