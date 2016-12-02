@@ -6886,6 +6886,44 @@ button.close {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans_light_macroman/OpenSans-Light-webfont.eot');
+    src: url('../fonts/opensans_light_macroman/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans_light_macroman/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/opensans_light_macroman/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans_light_macroman/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/opensans_bold_macroman/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/opensans_bold_macroman/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans_bold_macroman/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/opensans_bold_macroman/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans_bold_macroman/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 
 
 /*! jQuery UI - v1.12.1 - 2016-11-02
@@ -6914,7 +6952,7 @@ Text Domain: citytrack
 
 body,
 html {
-    font-family: 'Open-Sans-regular';
+    font-family: 'open_sansregular';
     font-size: 24px;
     line-height: 1.8em;
     color: #535353;
@@ -6961,7 +6999,7 @@ p {
 }
 
 .text-light {
-    font-family: "Open-Sans-light";
+    font-family: "open_sanslight";
 }
 
 .text-regular {
@@ -7623,7 +7661,8 @@ footer {
     color: #535353;
 }
 
-#partners #block2 ul{
+#partners #block2 ul,
+#test-users #block4 ul{
     list-style-image: url(../img/arrow2.png);
 }
 
@@ -7657,7 +7696,8 @@ footer {
 
 #blog .splash-block,
 #users .splash-block,
-#partners .splash-block {
+#partners .splash-block,
+#test-users .splash-block {
     height: 300px;
     margin-top: 84px;
 }
@@ -7718,15 +7758,10 @@ footer {
 * Styles applied on users page.
 */
 
-#users .splash-block{
+#users .splash-block, 
+#test-users .splash-block{
     background-image: url(../img/main_photo2.jpg);
     position: relative;
-}
-
-#users .splash-block #img-map-white{
-    top: -160px;
-    height: 500px;
-    left: -670px;
 }
 
 #users .users-description {
@@ -7747,11 +7782,13 @@ footer {
     padding-top: 7px;
 }
 
-#users #block2{
+#users #block2,
+#test-users #block2{
     padding-bottom: 28px;
 }
 
-#users .block {
+#users .block,
+#test-users .block {
     position: relative;
 }
 
@@ -7788,7 +7825,8 @@ footer {
         height: 253px;
 
     }
-    #users .splash-block{
+    #users .splash-block, 
+    #test-users .splash-block{
         background-image: url(../img/main_photo2_small.jpg);
         height: 168px;
     }
@@ -7906,7 +7944,8 @@ footer {
     #blog .splash-block, 
     #main .splash-block,
     #partners .splash-block,
-    #users .splash-block{
+    #users .splash-block, 
+    #test-users .splash-block{
         margin-top: 50px;
     }
 }
