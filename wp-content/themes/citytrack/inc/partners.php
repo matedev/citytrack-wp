@@ -1,5 +1,5 @@
     <div class="container separator partner-separator">
-            <h1 class="separator-content">CityTrack Partners</h1>
+            <h1 class="separator-content"><?php echo __("CityTrack Partners", "citytrack"); ?></h1>
     </div>
 
     <div id="partner-list">

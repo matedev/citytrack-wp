@@ -8,8 +8,6 @@
                             the_field('footer_column_1','option');
                         ?>                    
                     </div>
-                    <strong>Interested? Got questions?</strong> <br/>
-                    Send email to <strong><a href="mailto:marko.luomi@uta.fi">marko.luomi@uta.fi</a></strong>.
                      <p class="text-regular">
                         <button type="button" class="btn btn-white text-regular" data-toggle="modal" href='#modal-contact'><?php echo __("Contact Us", "citytrack"); ?></button>
                     </p>                          

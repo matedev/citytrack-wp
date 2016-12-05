@@ -30,6 +30,34 @@ $splash_url = $src[0];*/
                     }
                 ?>
             </div>
+            <div class="row padding-t30">
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/track.png" class="img-track">
+                <h2 class="text-center text-blue"><?php echo __("Registration", "citytrack"); ?></h2>
+                <div class="col-sm-6 col-sm-push-3">
+                    <form id="registerform" method="POST" role="form">
+                      <div class="form-group">
+                        <label for="user-name" class="text-blue"><?php echo __("Name", "citytrack"); ?></label>
+                        <input type="text" class="form-control no-empty" id="name" name="name" placeholder="<?php echo __("Enter your name", "citytrack"); ?>">
+                      </div>
+
+                       <div class="form-group">
+                        <label for="user-email" class="text-blue"><?php echo __("E-mail", "citytrack"); ?></label>
+                        <input type="email" class="form-control no-empty" id="email" name="email" placeholder="<?php echo __("Enter your e-mail", "citytrack"); ?>">
+                      </div>
+                     <div class="form-group">
+                        <label for="user-phone" class="text-blue"><?php echo __("Phone", "citytrack"); ?></label>
+                        <input type="number" class="form-control no-empty" id="phone" name="phone" placeholder="<?php echo __("001122333", "citytrack"); ?>">
+                      </div>
+                      <div class="form-group">
+                        <input id="locale" class="hidden" type="text" name="locale" value="<?php echo get_locale(); ?>">
+                      </div>
+                      <div class="btnwrap text-center"> 
+                        <button id="registerform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Register", "citytrack"); ?></button>
+                      </div>
+                    </form>
+                </div>
+                <img src="<?php echo get_template_directory_uri()?>/assets/img/track.png" class="img-track">
+            </div>      
         </div>         
     </div>
 

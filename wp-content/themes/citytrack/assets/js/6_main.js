@@ -60,6 +60,25 @@
         $('#modal-attend').on('hidden.bs.modal', function () {
             $("#modal-attend .no-empty").removeClass("warning");
         });
+
+        $("#registerform-send").bind( "click", function(event) {
+            event.preventDefault();
+            if (validateForm("registerform")){
+                console.log("puk1");
+                $("#registerform").submit();
+            }
+        });  
+
+        $("#registerform").submit(function( event ) {
+            console.log("puk2");
+            ct_registersubmit($('#registerform').serializeArray());
+            event.preventDefault();
+            return false;
+        });
+
+        $('#modal-attend').on('hidden.bs.modal', function () {
+            $("#modal-attend .no-empty").removeClass("warning");
+        });
     });
 
     $(document).on("click", ".btn-attend", function () {
@@ -88,6 +107,12 @@
         $('#' + id + ' input[type=email]').each(function(index,element) {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             if(!re.test($(this).val())){
+                $(this).addClass('warning');
+                ok = false;
+            }
+        })
+        $('#' + id + ' input[type=number]').each(function(index,element){
+            if($(this).val().length > 12){
                 $(this).addClass('warning');
                 ok = false;
             }
@@ -123,6 +148,19 @@
         });        
     }
 
+    function ct_registersubmit(formdata){
+        jQuery.post(ct_ajax.ajaxurl, {
+            'action': 'ct_register',
+            'register_data': formdata
+        }, function (response) {
+            if (response == 'error'){
+                $('#error-reg-modal').modal('show');
+            }else{  
+                $('#thanks-modal').modal('show');
+                $("#registerform").trigger('reset');
+            }
+        });        
+    }
 })(jQuery);
 
     document.addEventListener("DOMContentLoaded",

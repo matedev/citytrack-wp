@@ -320,6 +320,62 @@ function ct_attend_handle() {
 add_action('wp_ajax_ct_attend', 'ct_attend_handle');
 add_action('wp_ajax_nopriv_ct_attend', 'ct_attend_handle');
 
+
+//-----------------------------------------------
+// Handle test user registration
+//-----------------------------------------------
+function ct_register_handle() {
+
+    $data = array();
+    global $wpdb;
+
+    foreach (@$_POST['register_data'] as $i) {
+        $data[$i['name']] = $i['value'];
+    }
+
+    $sql = "SELECT * FROM registrations WHERE mail = '" . $data['email'] . "' OR phone = '". $data['phone']  . "'";
+    $results = $wpdb->get_results($sql, OBJECT );
+
+    if (count($results) > 0){
+        echo('error');
+        wp_die();
+        return;
+    }
+
+    $sql = "INSERT INTO registrations (name, mail, phone)VALUES ('$data[name]', '$data[email]', '$data[phone]')";
+    $results = $wpdb->get_results($sql, OBJECT );
+
+    $content_to_user = "";
+    $content_to_user.= __("Dear", "citytrack") . " " . $data['name'] . ",<br/><br/>";
+    $content_to_user.= __("Thank you for registering for the CityTrack", "citytrack") . __(" as a test user", "citytrack") .".<br/><br/>" ;
+    $content_to_user.= __("See you soon", "citytrack") . ", <br/>";
+    $content_to_user.= __("CityTrack team", "citytrack");
+
+    $subject_to_user = "[" . __("CityTrack automatic reply", "citytrack") . "] " . __("Successfull registration", "citytrack");
+
+    $content_to_admin = "";
+    $content_to_admin.= "New test user registration from " . $data['name'] . "<br/><br/>";
+    $content_to_admin.= "Name: " . $data['name'] . "<br/>";
+    $content_to_admin.= "E-mail: " . $data['email'] . "<br/>";
+    $content_to_admin.= "Phone: " . $data['phone'] . "<br/>";
+/*
+    $content_to_admin.= "Subject: " . $data['subject'] . "<br/>";
+    $content_to_admin.= "Message: " . $data['message'];
+*/
+    $subject_to_admin = "New test user registration from " . $data['user-name'] . " on CityTrack";
+
+    
+    //mail
+    wp_mail("sanna.rytovuori@uta.fi", $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    //wp_mail("kis.kiraly.mate@gmail.com", $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail($data['email'], $subject_to_user, $content_to_user, array('Content-Type: text/html; charset=UTF-8'));
+
+    wp_die();
+}
+
+add_action('wp_ajax_ct_register', 'ct_register_handle');
+add_action('wp_ajax_nopriv_ct_register', 'ct_register_handle');
+
 // Defer Javascripts
 // Defer jQuery Parsing using the HTML5 defer property
 if (!(is_admin() )) {

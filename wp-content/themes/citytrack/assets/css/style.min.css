@@ -6967,7 +6967,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Open-Sans-600';   
+    font-family: 'open_sansbold';   
 }
 
 s h2 {
@@ -7003,7 +7003,7 @@ p {
 }
 
 .text-regular {
-    font-family: "Open-Sans-regular";
+    font-family: "open_sansregular";
 }
 
 .margin-0 {
@@ -7107,7 +7107,7 @@ p {
     background: white;
     border: 0;
     color: #0077bb;
-    font-family: 'Open-Sans-600';
+    font-family: 'open_sansbold';
 }
 
 .navbar-brand {
@@ -7303,7 +7303,7 @@ p {
 
 #footer div.col-md-4:nth-child(even) p:first-of-type,
 #footer div.col-md-8:nth-child(odd) p:first-of-type{
-    font-family: "Open-Sans-light";
+    font-family: "open_sanslight";
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -7326,17 +7326,24 @@ footer {
     margin: 20px 0px 20px 0px;
 }
 
-#footer .img-track{
+#footer .img-track,
+#test-users .img-track{
     position: absolute;
 }
 
-#footer .img-track:first-child{
+#footer .img-track:first-child,
+#test-users .img-track:first-child{
     top: -62px;
     left: -977px;
 }
-#footer .img-track:last-child{
+#footer .img-track:last-child,
+#test-users .img-track:last-child{
     bottom: -329px;
     right: -730px;
+}
+
+#test-users .img-track{
+    z-index: -1;
 }
 
 /**
@@ -7532,7 +7539,7 @@ footer {
     transform: rotate(7deg);
 }
 #main .block p{
-    font-family: "Open-Sans-light";
+    font-family: "open_sanslight";
 }
 
 
@@ -7793,7 +7800,7 @@ footer {
 }
 
 #users .block p{
-    font-family: "Open-Sans-light";
+    font-family: "open_sanslight";
 }
 
 #users .partner-images-container {
@@ -7993,7 +8000,8 @@ footer {
 }
 
 @media (max-width: 1500px){
-    #footer .img-track:first-child{
+    #footer .img-track:first-child,
+    #test-users .img-track:first-child{
         display: none;
     }
     #footer .img-track:last-child{

@@ -79,8 +79,20 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <div class="modal-header text-center text-light"><h1><?php echo __("Sorry!", "citytrack"); ?></h1></div>
           <div class="modal-body text-center">
+            <?php echo __("Something went wrong!", "citytrack"); ?>
           </div>
-              <?php echo __("Something went wrong!", "citytrack"); ?>
+        </div>
+    </div>
+</div>
+
+<div id="error-reg-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <div class="modal-header text-center text-light"><h1><?php echo __("Sorry!", "citytrack"); ?></h1></div>
+          <div class="modal-body text-center">
+            <?php echo __("Already registered phone number or e-mail.", "citytrack"); ?>
+          </div>
         </div>
     </div>
 </div>
@@ -91,7 +103,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <div class="modal-header text-center text-light"><h1><?php echo __("Thank you!", "citytrack"); ?></h1></div>
           <div class="modal-body text-center">
-              <?php echo __("We received your message!", "citytrack"); ?>
+              <?php echo __("We received your interest!", "citytrack"); ?>
           </div>
         </div>
     </div>
