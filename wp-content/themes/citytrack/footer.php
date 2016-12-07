@@ -72,10 +72,10 @@
     </div>
 
     <footer class="text-center">
-        <p>The CityTrack research project is funded by 
+        <p><?php echo __("The CityTrack research project is funded by ", "citytrack"); ?>
             <a class="text-regular" title="Tekes website" href="http://www.tekes.fi/" 
                 rel="nofollow" target="_blank">
-                Tekes – the Finnish Funding Agency for Innovation</a>.
+                <?php echo __("Tekes – the Finnish Funding Agency for Innovation", "citytrack"); ?></a>.
         </p>
         <small class="text-blue text-light" >2016 &copy; All rights reserved</small>
     </footer>
