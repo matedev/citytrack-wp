@@ -763,6 +763,10 @@ footer {
     position: absolute;
     top: -14px;
 }
+
+.cd-timeline-block .cd-timeline-content div a{
+    font-size: 16px;
+}
 /**
 * Blog page style
 *

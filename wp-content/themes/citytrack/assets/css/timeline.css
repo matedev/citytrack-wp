@@ -302,6 +302,9 @@ header h1 {
     right: 122%;
     text-align: right;
   }
+  .cd-timeline-block:nth-child(odd) .cd-timeline-content div a{
+    float: right;
+  }
   .cssanimations .cd-timeline-content.is-hidden {
     visibility: hidden;
   }

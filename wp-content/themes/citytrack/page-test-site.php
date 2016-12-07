@@ -62,9 +62,12 @@ get_header();
                 <div class="cd-timeline-content">
                     <h2 class="text-blue"><?php the_sub_field('title') ?></h2>
                     <p><?php the_sub_field('description') ?></p>
-                    <button type="button" class="btn btn-blue btn-attend" data-toggle="modal" data-title="<?php the_sub_field('title') ?>" 
-                    data-date="<?php the_sub_field('date') ?>" data-time="<?php the_sub_field('time') ?>" data-desc="Please note: meeting starts at <?php the_sub_field('time') ?> 
-                    in <?php the_sub_field('place') ?>." href='#modal-attend'><?php echo __("Attend", "citytrack"); ?></button>
+                    <div>
+                        <button type="button" class="btn btn-blue btn-attend float-left" data-toggle="modal" data-title="<?php the_sub_field('title') ?>" 
+                        data-date="<?php the_sub_field('date') ?>" data-time="<?php the_sub_field('time') ?>" data-desc="Please note: meeting starts at <?php the_sub_field('time') ?> 
+                        in <?php the_sub_field('place') ?>." href='#modal-attend'><?php echo __("Attend", "citytrack"); ?></button>
+                        <a data-toggle="modal" href='#modal-contact'><?php echo __("More info", "citytrack"); ?></a>
+                    </div>
                     <span class="cd-date"><?php the_sub_field('date') ?></span>
                 </div> <!-- cd-timeline-content -->
             </div> <!-- cd-timeline-block -->                       
