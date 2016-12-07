@@ -347,7 +347,7 @@ function ct_register_handle() {
 
     $content_to_user = "";
     $content_to_user.= __("Dear", "citytrack") . " " . $data['name'] . ",<br/><br/>";
-    $content_to_user.= __("Thank you for registering for the CityTrack", "citytrack") . __(" as a test user", "citytrack") .".<br/><br/>" ;
+    $content_to_user.= __("Thank you for registering as a test user", "citytrack") .".<br/><br/>" ;
     $content_to_user.= __("See you soon", "citytrack") . ", <br/>";
     $content_to_user.= __("CityTrack team", "citytrack");
 

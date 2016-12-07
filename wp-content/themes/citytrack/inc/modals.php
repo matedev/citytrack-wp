@@ -103,7 +103,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <div class="modal-header text-center text-light"><h1><?php echo __("Thank you!", "citytrack"); ?></h1></div>
           <div class="modal-body text-center">
-              <?php echo __("We received your interest!", "citytrack"); ?>
+              <?php echo __("We received your message!", "citytrack"); ?>
           </div>
         </div>
     </div>
