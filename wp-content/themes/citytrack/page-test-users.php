@@ -76,8 +76,8 @@ $splash_url = $src[0];*/
     <div id="block3">
         <div class="container">
                 <?php
-                    if ( have_rows('scrollable_container', 4) ):
-                        while ( have_rows('scrollable_container', 4) ) : the_row(); 
+                    if ( have_rows('scrollable_container', 279) ):
+                        while ( have_rows('scrollable_container', 279) ) : the_row(); 
                 ?>
                             <div class="col-md-5 col-md-push-1 text-center">
                                 <img src="<?php $logo = get_sub_field('logo'); echo $logo['url']; ?>" height="63px">
