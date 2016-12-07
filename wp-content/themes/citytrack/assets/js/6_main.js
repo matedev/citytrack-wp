@@ -64,16 +64,21 @@
         $("#registerform-send").bind( "click", function(event) {
             event.preventDefault();
             if (validateForm("registerform")){
-                console.log("puk1");
                 $("#registerform").submit();
             }
         });  
 
-        $("#registerform").submit(function( event ) {
-            console.log("puk2");
-            ct_registersubmit($('#registerform').serializeArray());
-            event.preventDefault();
-            return false;
+        $("#registerform").submit(function(event) {
+            var $form = $(this);
+            if ($form.data('submitted') === true) {
+              // Previously submitted - don't submit again
+              event.preventDefault();
+            } else {
+              // Mark it so that the next submit can be ignored
+              $form.data('submitted', true);
+              ct_registersubmit($('#registerform').serializeArray());
+              event.preventDefault();
+            }
         });
 
         $('#modal-attend').on('hidden.bs.modal', function () {
@@ -158,8 +163,9 @@
             }else{  
                 $('#thanks-modal').modal('show');
                 $("#registerform").trigger('reset');
+                $("#registerform").data('submitted', true);
             }
-        });        
+        });
     }
 })(jQuery);
 
