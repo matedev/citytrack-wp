@@ -19,11 +19,12 @@
 
         $(' #blog #posts .apost .img-container img').addClass("img-responsive");
 
-        $('#partner-list .img-container').slice(-4).addClass("col-md-push-2 col-xs-6");
+        /*$('#partner-list .img-container').slice(-4).addClass("col-md-push-2 col-xs-6");
         $('#partner-list .img-container').slice(-2).addClass("col-sm-push-3");
 
         $('#partner-block .img-container').slice(-2).addClass("col-md-push-3");
-        $('#partner-block .img-container').slice(-1).addClass("col-sm-push-4");
+        $('#partner-block .img-container').slice(-1).addClass("col-sm-push-4");*/
+        $('#partner-list .img-container').slice(-5).addClass("col-sm-push-1");
 
         $( "#contantform-send" ).bind( "click", function(event) {
             event.preventDefault();

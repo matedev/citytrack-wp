@@ -1157,3 +1157,7 @@ footer {
     font-size: 16px; 
     margin-top: 150px;
 }
+
+#registrations .table-responsive{
+    margin: 0 100px;
+}
