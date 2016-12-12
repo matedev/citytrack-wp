@@ -85,6 +85,28 @@
         $('#modal-attend').on('hidden.bs.modal', function () {
             $("#modal-attend .no-empty").removeClass("warning");
         });
+
+        $('#btn-reg-update').bind("click", function(event){
+            event.preventDefault();
+            var arr = new Array();
+            $('#registrations tr.modified').each(function(index,element){
+                var obj = new Object();
+                obj.userid = $(this).data("userid");
+                obj.group = $(this).find("#reg-user-group").prop('checked');
+                obj.other = $(this).find("#reg-user-other").val();
+                arr.push(obj);
+            });
+            registration_update(arr); 
+        });
+
+        $('#registrations input').change(function() {
+            $(this).parent().parent("td").css("background-color", "green");
+            $(this).parent().parent("td").addClass("modified");
+            $(this).parent().parent().parent("tr").css("background-color", "lightgreen");
+            $(this).parent().parent().parent("tr").addClass("modified");
+            $(this).parent().parent().parent("tr").addClass("modified");
+        }); 
+
     });
 
     $(document).on("click", ".btn-attend", function () {
@@ -168,6 +190,18 @@
             }
         });
     }
+
+    function registration_update(tabledata){
+        jQuery.post(ct_ajax.ajaxurl, {
+            'action': 'ct_registration_update',
+            'update_data': tabledata
+        }, function (response) {
+            if (response == 'error'){
+                $('#error-reg-modal').modal('show');
+            }
+        });        
+    }
+
 })(jQuery);
 
     document.addEventListener("DOMContentLoaded",

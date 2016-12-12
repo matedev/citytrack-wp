@@ -343,6 +343,7 @@ function ct_register_handle() {
         wp_die();
         return;
     }
+
     date_default_timezone_set("Europe/Helsinki");
     $sql = "INSERT INTO registrations (name, mail, phone, reg_date)VALUES ('$data[name]', '$data[email]', '$data[phone]', '" . date('Y-m-d G:i:s') . "')";
     $results = $wpdb->get_results($sql, OBJECT );
@@ -377,6 +378,31 @@ function ct_register_handle() {
 
 add_action('wp_ajax_ct_register', 'ct_register_handle');
 add_action('wp_ajax_nopriv_ct_register', 'ct_register_handle');
+
+//-----------------------------------------------
+// Handle registration admin page
+//-----------------------------------------------
+function ct_registration_update_handle() {
+
+    global $wpdb;
+    $data = array();
+
+    if (isset($_POST['update_data'])){
+      foreach (@$_POST['update_data'] as $i) {
+        $sql = "UPDATE registrations SET discussion_group = " . $i['group'] . ", other='". $i['other'] . "' WHERE id =" . $i['userid'];
+        $results = $wpdb->get_results($sql, OBJECT );
+        if (count($results) > 0){
+            echo('error');
+            wp_die();
+            return;
+        }       
+      }
+    }
+    wp_die();
+}
+
+add_action('wp_ajax_ct_registration_update', 'ct_registration_update_handle');
+add_action('wp_ajax_nopriv_ct_registration_update', 'ct_registration_update_handle');
 
 // Defer Javascripts
 // Defer jQuery Parsing using the HTML5 defer property

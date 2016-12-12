@@ -1,3 +1,4 @@
+<div class="ct-modal">
 <div class="modal fade" id="modal-contact">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -107,4 +108,5 @@
           </div>
         </div>
     </div>
+</div>
 </div>

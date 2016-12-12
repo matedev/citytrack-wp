@@ -7436,12 +7436,12 @@ footer {
 * Styles applied on modals.
 */
 
-.modal-body {
+.ct-modal .modal-body {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     padding: 50px 70px;
 }
-.modal-content{
+.ct-modal .modal-content{
     background: url("../img/modal_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -7449,16 +7449,16 @@ footer {
     box-shadow: none;
 }
 
-.modal-body img {
+.ct-modal .modal-body img {
     width: 100%;
 }
 
-.modal-dialog {
+.ct-modal .modal-dialog {
     max-width: 850px;
     width: 100%;
 }
 
-.modal .close {
+.ct-modal .modal .close {
     box-shadow: none;
     color: #fff;
     font-size: 40px;
@@ -7467,30 +7467,30 @@ footer {
     text-shadow: none;
 }
 
-.modal .close:active,
-.modal .close:hover,
-.modal .close:focus,
-.modal .close:visited{
+.ct-modal .modal .close:active,
+.ct-modal .modal .close:hover,
+.ct-modal .modal .close:focus,
+.ct-modal .modal .close:visited{
     outline: none;
 }
 
-.modal .modal-dialog {
+.ct-modal .modal .modal-dialog {
     max-width: 600px;
 }
 
-#modal-contact textarea {
+.ct-modal #modal-contact textarea {
     height: 120px;
     resize: none;
     width: 100%;
 }
 
-.modal-header {
+.ct-modal .modal-header {
     background-color: rgba(22, 75, 117, 0.75);
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 
-.modal-header h1{
+.ct-modal .modal-header h1{
     color: #fff;
     font-size: 24px;
     padding: 33px 0px 33px 0px;
@@ -7502,18 +7502,18 @@ footer {
     height: 40px;
 }
 
-.modal-body .form-group label{
+.ct-modal .modal-body .form-group label{
     font-size: 15px;
     line-height: normal;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
 
-.modal-body .form-group{
+.ct-modal .modal-body .form-group{
     margin-bottom: 0px;
 }
 
-.modal-body button[type=submit]{
+.ct-modal .modal-body button[type=submit]{
     margin-top: 15px;
 }
 
