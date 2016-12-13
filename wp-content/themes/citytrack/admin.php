@@ -2,7 +2,6 @@
 /*Template Name: admin*/
 
   get_header();
-
     $sql = "SELECT * FROM registrations ORDER BY name ASC";
     global $wpdb;
     $results = $wpdb->get_results($sql, OBJECT );
@@ -94,13 +93,15 @@
         <p>Are you sure saving the changes?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary float-left" id="btn-reg-update" onClick="window.location.reload()">Yes</button>
+        <button type="button" class="btn btn-primary float-left" id="btn-reg-update" onClick="window.location.reload()" data-dismiss="modal">Yes</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
       </div>
     </div>
 
   </div>
 </div>
+
+<div id="modal-wait" class="modal"></div>
 
 </body>
 </html>

@@ -192,10 +192,12 @@
     }
 
     function registration_update(tabledata){
+        $("body").addClass("loading");
         jQuery.post(ct_ajax.ajaxurl, {
             'action': 'ct_registration_update',
             'update_data': tabledata
         }, function (response) {
+            $("body").removeClass("loading");
             if (response == 'error'){
                 $('#error-reg-modal').modal('show');
             }
