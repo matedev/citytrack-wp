@@ -55,13 +55,14 @@ $splash_url = $src[0];*/
                         <div id="group-option" class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="sel1" class="text-blue"><?php echo __("Select organization", "citytrack"); ?></label>
-                                    <select class="form-control" id="sel1">
+                                    <label for="sel1" class="text-blue"><?php echo __("Organization", "citytrack"); ?></label>
+                                    <select class="form-control" id="reggroup">
+                                        <option>Select</option>
                                         <?php
-                                            if ( have_rows('student_groups', 300) ):
-                                                while ( have_rows('student_groups', 300) ) : the_row(); 
+                                            if ( have_rows('student_groups', 367) ):
+                                                while ( have_rows('student_groups', 367) ) : the_row(); 
                                         ?>
-                                                    <option><?php the_sub_field('student_group_name')?></option>
+                                                    <option value="<?php the_sub_field('student_group_name')?>" data-code="<?php the_sub_field('code')?>"><?php the_sub_field('student_group_name')?></option>
                                         <?php            
                                                 endwhile;
                                             endif
@@ -72,12 +73,12 @@ $splash_url = $src[0];*/
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="user-name" class="text-blue"><?php echo __("Code", "citytrack"); ?></label>
-                                    <input type="text" class="form-control no-empty" id="name" name="name" placeholder="<?php echo __("Group code", "citytrack"); ?>">
+                                    <input type="text" class="form-control" id="regcode" name="regcode" placeholder="<?php echo __("Group code", "citytrack"); ?>">
                                 </div>                            
                             </div>
                         </div>                                        
                         <div class="form-group">
-                            <input id="locale" class="hidden" type="text" name="locale" value="<?php echo get_locale(); ?>">
+                            <input id="user-group" class="hidden" type="text" name="usergroup" value="">
                         </div>
                         <div class="btnwrap text-center"> 
                             <button id="registerform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Register", "citytrack"); ?></button>

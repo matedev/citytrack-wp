@@ -34,6 +34,16 @@
             }         
         }); 
 
+        $("#reggroup").change(function(){
+            $("#reggroup option").each(function(index,element){
+                $(this).removeClass("selected");
+                if ($("#reggroup").val() == $(this).text()){
+                    $(this).addClass("selected");
+                    $("#user-group").val($(this).text());
+                }
+            })
+        });
+
 
         $( "#contantform-send" ).bind( "click", function(event) {
             event.preventDefault();
@@ -154,6 +164,17 @@
                 ok = false;
             }
         })
+        if ($("#user-member").is(":checked")){
+            var userCode = $("#regcode").val();
+            var code = $("#reggroup option.selected").attr("data-code");
+            if (code != userCode){
+                $("#regcode").addClass('warning');
+                ok = false;
+            }else{
+                $("#regcode").removeClass('warning');
+            }
+        }
+        console.log(ok);
         return ok;
     }
 
@@ -195,6 +216,7 @@
             }else{  
                 $('#thanks-modal').modal('show');
                 $("#registerform").trigger('reset');
+                $("#group-option").removeClass("animate");
                 $("#registerform").data('submitted', true);
             }
         });
