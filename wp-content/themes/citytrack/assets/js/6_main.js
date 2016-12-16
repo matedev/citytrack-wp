@@ -26,6 +26,15 @@
         $('#partner-block .img-container').slice(-1).addClass("col-sm-push-4");*/
         $('#partner-list .img-container').slice(-5).addClass("col-sm-push-1");
 
+        $( "#user-member" ).change(function() {
+            if($(this).is(":checked")) {
+                $("#group-option").addClass("animate");
+            }else{
+                $("#group-option").removeClass("animate");
+            }         
+        }); 
+
+
         $( "#contantform-send" ).bind( "click", function(event) {
             event.preventDefault();
             if (validateForm("contactform")){
