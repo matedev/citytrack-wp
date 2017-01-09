@@ -345,7 +345,7 @@ function ct_register_handle() {
     }
 
     date_default_timezone_set("Europe/Helsinki");
-    $sql = "INSERT INTO registrations (name, mail, phone, user_group, reg_date)VALUES ('$data[name]', '$data[email]', '$data[phone]', '$data[usergroup]', '" . date('Y-m-d G:i:s') . "')";
+    $sql = "INSERT INTO registrations (name, mail, phone, user_group, reg_date)VALUES ('$data[name]', '$data[email]', '$data[phone]', '$data[usergroup]"." $data[othergroup]', '" . date('Y-m-d G:i:s') . "')";
     $results = $wpdb->get_results($sql, OBJECT );
 
     $content_to_user = "";

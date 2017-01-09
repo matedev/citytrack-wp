@@ -57,7 +57,7 @@ $splash_url = $src[0];*/
                                 <div class="form-group">
                                     <label for="sel1" class="text-blue"><?php echo __("Organization", "citytrack"); ?></label>
                                     <select class="form-control" id="reggroup">
-                                        <option>Select</option>
+                                        <option class="group-select"><?php echo __("Select", "citytrack"); ?></option>
                                         <?php
                                             if ( have_rows('student_groups', 367) ):
                                                 while ( have_rows('student_groups', 367) ) : the_row(); 
@@ -66,19 +66,27 @@ $splash_url = $src[0];*/
                                         <?php            
                                                 endwhile;
                                             endif
-                                        ?>                                        
+                                        ?>
+                                        <option class="group-other" value="<?php echo __("Other", "citytrack"); ?>" data-code=""><?php echo __("Other", "citytrack"); ?></option>                                        
                                     </select>
                                 </div> 
                             </div> 
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group" id="group-code-box" style="display: none">
                                     <label for="user-name" class="text-blue"><?php echo __("Code", "citytrack"); ?></label>
                                     <input type="text" class="form-control" id="regcode" name="regcode" placeholder="<?php echo __("Group code", "citytrack"); ?>">
-                                </div>                            
+                                </div>
+                                <div class="form-group" id="group-name-box" style="display: none">
+                                    <label for="user-name" class="text-blue"><?php echo __("Name", "citytrack"); ?></label>
+                                    <input type="text" class="form-control" id="other-group-name" name="othergroup" placeholder="<?php echo __("Organization name", "citytrack"); ?>">
+                                </div>                           
                             </div>
                         </div>                                        
                         <div class="form-group">
                             <input id="user-group" class="hidden" type="text" name="usergroup" value="">
+                        </div>
+                        <div class="reg-info text-center">
+                            <?php echo __("Contact details are used only for research-related communication and the lotteries.", "citytrack"); ?>
                         </div>
                         <div class="btnwrap text-center"> 
                             <button id="registerform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Register", "citytrack"); ?></button>

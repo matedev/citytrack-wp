@@ -40,6 +40,16 @@
                 if ($("#reggroup").val() == $(this).text()){
                     $(this).addClass("selected");
                     $("#user-group").val($(this).text());
+                    if($(this).hasClass("group-other")){
+                        $("#group-code-box").css("display","none");
+                        $("#group-name-box").css("display","block");
+                    }else if($(this).hasClass("group-select")){
+                        $("#group-code-box").css("display","none");
+                        $("#group-name-box").css("display","none");   
+                    }else{
+                        $("#group-code-box").css("display","block");
+                        $("#group-name-box").css("display","none"); 
+                    }
                 }
             })
         });
@@ -165,6 +175,9 @@
             }
         })
         if ($("#user-member").is(":checked")){
+            if ($("#reggroup option.selected").hasClass("group-other")){
+                return ok;
+            }
             var userCode = $("#regcode").val();
             var code = $("#reggroup option.selected").attr("data-code");
             if (code != userCode){

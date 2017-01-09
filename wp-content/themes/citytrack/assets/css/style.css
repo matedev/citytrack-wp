@@ -1011,6 +1011,12 @@ footer {
     opacity: 1;
     height: 100px;
 }
+
+#test-users .reg-info{
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
 /**
 * Registrations
 *

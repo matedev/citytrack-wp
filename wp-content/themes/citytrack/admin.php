@@ -16,6 +16,7 @@
           <th>E-mail</th>
           <th>Phone</th>
           <th>Early bird</th>
+          <th>Student organization</th>
           <th>Discussion group</th>
           <th>Other</th>
         </tr>
@@ -32,6 +33,7 @@
         }else{
           echo('<td><i class="fa fa-check" aria-hidden="true"></i></td>');
         }
+        echo('<td>'.$item->user_group.'</td>');
         echo '<td><label><input type="checkbox" id="reg-user-group" ';
           if($item->discussion_group>0){
             echo 'checked';
