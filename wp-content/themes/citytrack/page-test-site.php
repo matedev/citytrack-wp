@@ -42,7 +42,7 @@ get_header();
                 while ( have_rows('events','option') ) : 
                     the_row();
         ?> 
-            <div class="cd-timeline-block hidden">
+            <div class="cd-timeline-block">
                 <div class="cd-timeline-img cd-picture"> 
                 <img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="90px">
                 <?php 

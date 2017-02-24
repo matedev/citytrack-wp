@@ -13,7 +13,7 @@ $splash_url = $src[0];*/
     <div class="splash-block">
         <!--img src="<?php echo get_template_directory_uri()?>/assets/img/citymap_white.png" id="img-map-white"-->
     </div>
-
+    <div id="feedback"></div>
     <div class="container separator">
         <div class="separator-content"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo_marker_small.png" height="64px"></div>
     </div>
@@ -30,10 +30,10 @@ $splash_url = $src[0];*/
                     }
                 ?>
             </div>
-            <div class="row padding-t30">
+            <div class="row">
                 <img src="<?php echo get_template_directory_uri()?>/assets/img/track.png" class="img-track">
-                <h2 class="text-center text-blue"><?php echo __("Registration", "citytrack"); ?></h2>
-                <div class="col-sm-6 col-sm-push-3">
+                <div class="col-sm-6 padding-t30">
+                    <h2 class="text-center text-blue"><?php echo __("Registration", "citytrack"); ?></h2>
                     <form id="registerform" method="POST" role="form">
                         <div class="form-group">
                             <label for="user-name" class="text-blue"><?php echo __("Name", "citytrack"); ?></label>
@@ -45,7 +45,7 @@ $splash_url = $src[0];*/
                         </div>
                         <div class="form-group">
                             <label for="user-phone" class="text-blue"><?php echo __("Phone", "citytrack"); ?></label>
-                            <input type="number" class="form-control no-empty" id="phone" name="phone" placeholder="<?php echo __("001122333", "citytrack"); ?>">
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="<?php echo __("001122333", "citytrack"); ?>">
                         </div>
                         <div class="form-group">
                             <div class="checkbox">
@@ -90,6 +90,26 @@ $splash_url = $src[0];*/
                         </div>
                         <div class="btnwrap text-center"> 
                             <button id="registerform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Register", "citytrack"); ?></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6 padding-t30">
+                    <h2 class="text-center text-blue"><?php echo __("Feedback", "citytrack"); ?></h2>
+                    <form id="feedbackform" method="POST" role="form">
+                        <div class="form-group">
+                            <label for="user-name" class="text-blue"><?php echo __("Name", "citytrack"); ?></label>
+                            <input type="text" class="form-control no-empty" id="name" name="name" placeholder="<?php echo __("Enter your name", "citytrack"); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-email" class="text-blue"><?php echo __("E-mail", "citytrack"); ?></label>
+                            <input type="email" class="form-control no-empty" id="email" name="email" placeholder="<?php echo __("Enter your e-mail", "citytrack"); ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-phone" class="text-blue"><?php echo __("Feedback message", "citytrack"); ?></label>
+                            <textarea id="message" name="message" class="form-control no-empty" rows="6"></textarea>
+                        </div>                                     
+                        <div class="btnwrap text-center"> 
+                            <button id="feedbackform-send" type="submit" class="btn btn-blue sendbtn"><?php echo __("Send", "citytrack"); ?></button>
                         </div>
                     </form>
                 </div>

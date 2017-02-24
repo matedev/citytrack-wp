@@ -111,6 +111,26 @@
             }
         });
 
+        $("#feedbackform-send").bind( "click", function(event) {
+            event.preventDefault();
+            if (validateForm("feedbackform")){
+                $("#feedbackform").submit();
+            }
+        });  
+
+        $("#feedbackform").submit(function(event) {
+            var $form = $(this);
+            if ($form.data('submitted') === true) {
+              // Previously submitted - don't submit again
+              event.preventDefault();
+            } else {
+              // Mark it so that the next submit can be ignored
+              $form.data('submitted', true);
+              ct_feedbacksubmit($('#feedbackform').serializeArray());
+              event.preventDefault();
+            }
+        });
+
         $('#modal-attend').on('hidden.bs.modal', function () {
             $("#modal-attend .no-empty").removeClass("warning");
         });
@@ -231,6 +251,22 @@
                 $("#registerform").trigger('reset');
                 $("#group-option").removeClass("animate");
                 $("#registerform").data('submitted', true);
+            }
+        });
+    }
+
+    function ct_feedbacksubmit(formdata){
+        jQuery.post(ct_ajax.ajaxurl, {
+            'action': 'ct_feedback',
+            'feedback_data': formdata
+        }, function (response) {
+            if (response == 'error'){
+                $('#error-reg-modal').modal('show');
+            }else{  
+                $('#thanks-modal').modal('show');
+                $("#feedbackform").trigger('reset');
+                $("#group-option").removeClass("animate");
+                $("#feedbackform").data('submitted', true);
             }
         });
     }

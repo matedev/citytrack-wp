@@ -415,3 +415,52 @@ if (!(is_admin() )) {
     }
     add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
 }
+
+//-----------------------------------------------
+// Handle feedbacks
+//-----------------------------------------------
+function ct_feedback_handle() {
+
+    $data = array();
+    global $wpdb;
+    var_dump($_POST['feedback_data']);
+    foreach (@$_POST['feedback_data'] as $i) {
+        $data[$i['name']] = $i['value'];
+    }
+
+    if (count($results) > 0){
+        echo('error');
+        wp_die();
+        return;
+    }
+
+    $content_to_user = "";
+    $content_to_user.= __("Dear", "citytrack") . " " . $data['name'] . ",<br/><br/>";
+    $content_to_user.= __("Thank you for helping us improving our service!", "citytrack") ."<br/><br/>" ;
+    $content_to_user.= __("Best regards", "citytrack") . ", <br/>";
+    $content_to_user.= __("CityTrack team", "citytrack");
+
+    $subject_to_user = "[" . __("CityTrack automatic reply", "citytrack") . "] " . __("Feedback received", "citytrack");
+
+    $content_to_admin = "";
+    $content_to_admin.= "New feedback message " . $data['name'] . "<br/><br/>";
+    $content_to_admin.= "Name: " . $data['name'] . "<br/>";
+    $content_to_admin.= "E-mail: " . $data['email'] . "<br/>";
+    $content_to_admin.= "Feedback: " . $data['message'] . "<br/>";
+/*
+    $content_to_admin.= "Subject: " . $data['subject'] . "<br/>";
+    $content_to_admin.= "Message: " . $data['message'];
+*/
+    $subject_to_admin = "New feedback from " . $data['user-name'] . " on CityTrack";
+
+    
+    //mail
+    wp_mail("kis.kiraly.mate@gmail.com", $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    //wp_mail("kis.kiraly.mate@gmail.com", $subject_to_admin, $content_to_admin, array('Content-Type: text/html; charset=UTF-8'));
+    wp_mail($data['email'], $subject_to_user, $content_to_user, array('Content-Type: text/html; charset=UTF-8'));
+
+    wp_die();
+}
+
+add_action('wp_ajax_ct_feedback', 'ct_feedback_handle');
+add_action('wp_ajax_nopriv_ct_feedback', 'ct_feedback_handle');

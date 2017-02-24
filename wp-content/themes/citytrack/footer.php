@@ -77,7 +77,7 @@
                 rel="nofollow" target="_blank">
                 <?php echo __("Tekes – the Finnish Funding Agency for Innovation", "citytrack"); ?></a>.
         </p>
-        <small class="text-blue text-light" >2016 &copy; All rights reserved</small>
+        <small class="text-blue text-light" ><?php echo date("Y"); ?> &copy; All rights reserved</small>
     </footer>
 
     <?php include 'inc/modals.php';?>
